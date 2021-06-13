@@ -2,5 +2,5 @@ from django.shortcuts import render
 
 
 
-def about_me(request):
-    return render(request, "about_me/about_me.html", {})
+def home(request):
+    return render(request, "about_me/home.html", {})
