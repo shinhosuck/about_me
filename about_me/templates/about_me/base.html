@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link type="text/css" rel="stylesheet" href="{% static 'about_me/css/all.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'about_me/style.css' %}">
@@ -18,7 +18,47 @@
 <body>
 
     <header>
-       
+        <!-- header -->
+       <div class="header">
+            <!-- first child -->
+            <nav class="nav">navigation</nav>
+
+            <!-- second child -->
+            <div class="banner">
+                <!-- banner container -->
+                <div class="banner-container">
+                    <h1 class="banner-title">I am <strong>Eric Anderson</strong></h1>
+                    <h1 class="banner-jobs">
+                        developer
+                        <span><i class="fas fa-angle-double-right"></i></span>
+                        designer
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <!-- end of header -->
+
+        <!-- about -->
+        <div class="about">
+            <div class="about-img">
+                <img src="{% static 'about_me/images/img.jpg' %}" alt="">
+            </div>
+            <div class="about-info">
+                <h2 class="about-info-title">About me</h2>
+                <p class="about-info-text">
+                    Lorem Ipsum is simply dummy text of the printing and 
+                    typesetting industry. Lorem Ipsum has been the industry's 
+                    standard dummy text ever since the 1500s, when an unknown 
+                    printer took a galley of type and scrambled it to make a 
+                    type specimen book.
+                </p>
+                <div class="about-info-links">
+                    <a href="#" class="about-info-link dark-btn">hire me</a>
+                    <a href="#" class="about-info-link light-btn">download CV</a>
+                </div>
+            </div>
+        </div>
+        <!-- end of about -->
     </header>
 
     <main>
@@ -36,3 +76,4 @@
     <script type="text/javascript" src="{% static 'about_me/main.js' %}"></script>
 </body>
 </html>
+<!-- video time  1:44:44-->
