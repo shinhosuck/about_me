@@ -19,10 +19,7 @@
 
     <header>
         <!-- header -->
-       <div class="header">
-            <!-- first child -->
-            <nav class="nav">navigation</nav>
-
+       <div id="header" class="header">
             <!-- second child -->
             <div class="banner">
                 <!-- banner container -->
@@ -34,46 +31,64 @@
                         designer
                     </h1>
                 </div>
+                <nav id="navbar" class="nav">
+                    <ul>
+                        <li><a class="nav-item" href="#about">About Me</a></li>
+                        <li><a class="nav-item" href="#skills">Skills</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
         <!-- end of header -->
-
-        <!-- about -->
-        <div class="about">
-            <div class="about-img">
-                <img src="{% static 'about_me/images/img.jpg' %}" alt="">
-            </div>
-            <div class="about-info">
-                <h2 class="about-info-title">About me</h2>
-                <p class="about-info-text">
-                    Lorem Ipsum is simply dummy text of the printing and 
-                    typesetting industry. Lorem Ipsum has been the industry's 
-                    standard dummy text ever since the 1500s, when an unknown 
-                    printer took a galley of type and scrambled it to make a 
-                    type specimen book.
-                </p>
-                <div class="about-info-links">
-                    <a href="#" class="about-info-link dark-btn">hire me</a>
-                    <a href="#" class="about-info-link light-btn">download CV</a>
-                </div>
-            </div>
-        </div>
-        <!-- end of about -->
     </header>
 
     <main>
-        <div class="block-container">
         {% block content %}
         
         {% endblock content %}
-        </div>
     </main>
 
     <footer>
-       
+       <div class="scroll-up-button">
+           <a href="#header"><i class="fas fa-chevron-up"></i></a>
+       </div>
     </footer>
 
     <script type="text/javascript" src="{% static 'about_me/main.js' %}"></script>
+
+    <script>
+        scroll()
+        function scroll(){
+
+            const scrollUpButton = document.querySelector(".scroll-up-button")
+            const idNavbar = document.querySelector("#navbar")
+
+            idNavbar.addEventListener("click", function(){
+                idNavbar.style.position = "fixed"
+                idNavbar.style.width = "100%"
+                idNavbar.style.zIndex = "1"
+            })
+            
+            window.addEventListener("scroll", function(){
+                if (window.scrollY == 0) {
+                    idNavbar.style.position = "absolute;"
+                    idNavbar.style.width = "100%"
+                    idNavbar.style.zIndex = "0"
+                    scrollUpButton.classList.remove("show-scroll-up-button")
+                }
+                else{
+                    idNavbar.style.position = "fixed"
+                    idNavbar.style.width = "100%"
+                    idNavbar.style.zIndex = "1"
+                    scrollUpButton.classList.add("show-scroll-up-button")
+                }
+            })
+            
+        }
+
+    
+    </script>
+
 </body>
 </html>
 <!-- video time  1:44:44-->
