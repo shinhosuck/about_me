@@ -1,49 +1,18 @@
-{% extends "about_me/base.html" %}
-{% load static %}
+{% extends "about_me/base.html"%}
+
+
+
+<title>
+{% block title %}
+    My Portfolio
+{% endblock title %}
+</title>
+
+
 
 {% block content %}
-
-<!-- about -->
-<div id="about" class="about">
-    <!-- spans create by js -->
-    <h2 class="about-title">About me </h2>
-    <div class="about-content">
-        <div class="about-img">
-            <img src="{% static 'about_me/images/img.jpg' %}" alt="">
-        </div>
-        <div class="about-info">
-            <!-- <h2 class="about-info-title">About me</h2> -->
-            <p class="about-info-text">
-                Lorem Ipsum is simply dummy text of the printing and 
-                typesetting industry. Lorem Ipsum has been the industry's 
-                standard dummy text ever since the 1500s, when an unknown 
-                printer took a galley of type and scrambled it to make a 
-                type specimen book.
-            </p>
-            <div class="about-info-links">
-                <a href="#" class="about-info-link dark-btn">hire me</a>
-                <a href="#" class="about-info-link light-btn">download CV</a>
-            </div>
-        </div>
-    </div>
+<div id="portfolio" class="my-portfolio">
+    <h1 class="portfolio-title">My Portfolio</h1>
 </div>
-<!-- end of about -->
-
-<!-- skills -->
-<div id="skills" class="skills">
-    <h2 class="skills-title">What I Know </h2>
-    <div class="skills-content">
-        <h2 class="python">Python</h2>
-        <h2 class="django" >Django</h2>
-        <h2 class="css">CSS</h2>
-        <h2 class="js">JS</h2>
-    </div>
-</div>
-<!-- end of skills -->
-
-
-
-
-
 
 {% endblock content %}

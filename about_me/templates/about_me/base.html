@@ -1,9 +1,9 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -11,84 +11,119 @@
     <link type="text/css" rel="stylesheet" href="{% static 'about_me/css/all.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'about_me/style.css' %}">
     <title>
-        {% block title %}
-        {% endblock title %}
+    {% block title %}
+        
+    {% endblock title %}
     </title>
 </head>
 <body>
-
-    <header>
-        <!-- header -->
-       <div id="header" class="header">
-            <!-- second child -->
-            <div class="banner">
-                <!-- banner container -->
-                <div class="banner-container">
-                    <h1 class="banner-title">I am <strong>Eric Anderson</strong></h1>
-                    <h1 class="banner-jobs">
-                        developer
-                        <span><i class="fas fa-angle-double-right"></i></span>
-                        designer
-                    </h1>
-                </div>
-                <nav id="navbar" class="nav">
-                    <ul>
-                        <li><a class="nav-item" href="#about">About Me</a></li>
-                        <li><a class="nav-item" href="#skills">Skills</a></li>
-                    </ul>
-                </nav>
+    <header id="header">
+        <nav class="nav-mobile">
+            <div class="nav-buttons">
+                <i class="fa fa-bars"></i>
+                <i class="fa fa-times"></i>
+            </div>
+            <div class="brand">
+                <a class="brand-name-link" href="{% url 'about_me:home' %}" class="brand-name">Digital <span>Samurai</span></a>
+            </div>
+            <ul class="nav-items-mobile">
+                <li class="nav-item"><a href="#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a href="">Collaborate</a></li>
+                <li class="nav-item"><a href="">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header">
+            <div class="header-text">
+                <h1 class="header-title">Building digital products, brands and 
+                    <span>experience.</span>
+                </h1>
+                <p class="header-para">
+                    A <strong>front-end & back-end developer</strong> in Philippines,
+                    based out of San Diego, California USA. I specialize in Django Framework,
+                    UX/UI, Responsive Web Design and Visual Development.
+                </p>
+                <a href="#" class="header-hire-me-btn">Hire Me</a>
+            </div>
+            <div class="header-img">
+                <img src="{% static 'about_me/images/img.jpg' %}" alt="">
             </div>
         </div>
-        <!-- end of header -->
+        <nav class="nav">
+            <div class="nav-buttons">
+                <i class="fa fa-bars"></i>
+                <i class="fa fa-times"></i>
+            </div>
+            <div class="brand">
+                <a class="brand-name-link" href="{% url 'about_me:home' %}" class="brand-name">Digital <span>Samurai</span></a>
+            </div>
+            <ul class="nav-items">
+                <li class="nav-item"><a href="#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a href="">Collaborate</a></li>
+                <li class="nav-item"><a href="">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        {% block content %}
-        
-        {% endblock content %}
+    {% block content %}
+    {% endblock content %}
     </main>
 
     <footer>
-       <div class="scroll-up-button">
-           <a href="#header"><i class="fas fa-chevron-up"></i></a>
-       </div>
+        <div class="scroll-up-button">
+            <a href="#header"><i class="fas fa-chevron-up"></i></a>
+        </div>
     </footer>
 
     <script type="text/javascript" src="{% static 'about_me/main.js' %}"></script>
 
     <script>
-        scroll()
-        function scroll(){
 
-            const scrollUpButton = document.querySelector(".scroll-up-button")
-            const idNavbar = document.querySelector("#navbar")
+        const faBars = document.querySelector(".fa-bars")
+        const faTimes = document.querySelector(".fa-times")
+        const navItemsMobile = document.querySelector(".nav-items-mobile")
+        const scrollUpButton = document.querySelector(".scroll-up-button")
 
-            idNavbar.addEventListener("click", function(){
-                idNavbar.style.position = "fixed"
-                idNavbar.style.width = "100%"
-                idNavbar.style.zIndex = "1"
-            })
+        console.log(scrollUpButton)
+
+        faBars.addEventListener("click", function(){
+            faBars.style.display = "none"
+            navItemsMobile.classList.add("show-nav-items-mobile")
+            faTimes.style.display = "block"
+            document.body.style.overflow = "hidden"
+        })
+        faTimes.addEventListener("click", function(){
+            faBars.style.display = "block"
+            navItemsMobile.classList.remove("show-nav-items-mobile")
+            faTimes.style.display = "none"
+            document.body.style.overflow = "scroll"
             
-            window.addEventListener("scroll", function(){
-                if (window.scrollY == 0) {
-                    idNavbar.style.position = "absolute;"
-                    idNavbar.style.width = "100%"
-                    idNavbar.style.zIndex = "0"
-                    scrollUpButton.classList.remove("show-scroll-up-button")
-                }
-                else{
-                    idNavbar.style.position = "fixed"
-                    idNavbar.style.width = "100%"
-                    idNavbar.style.zIndex = "1"
-                    scrollUpButton.classList.add("show-scroll-up-button")
-                }
-            })
-            
-        }
+        })
 
+        window.addEventListener("resize", function(){
+            if (window.innerWidth <= 720) {
+                    navItemsMobile.classList.remove("show-nav-items-mobile")
+                    faTimes.style.display = "none"
+                    faBars.style.display = "block"
+            }
+        })
+
+        window.addEventListener("scroll", function(){
+            if (window.scrollY > 0) {
+                console.log(window.scrollY)
+                navItemsMobile.classList.remove("show-nav-items-mobile")
+                scrollUpButton.classList.add("show-scroll-up-button")
+                faBars.style.display = "block"
+                faTimes.style.display = "none"
+                document.body.style.overflow = "scroll"
+                
+            }
+            else{
+                scrollUpButton.classList.remove("show-scroll-up-button")
+                console.log(window.scrollY)
+            }
+        })
     
     </script>
-
 </body>
 </html>
-<!-- video time  1:44:44-->
