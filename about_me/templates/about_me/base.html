@@ -29,9 +29,9 @@
                 <a class="brand-name-link" href="{% url 'about_me:home' %}" class="brand-name">Digital <span>Samurai</span></a>
             </div>
             <ul class="nav-items-mobile">
-                <li class="nav-item"><a href="#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a href="#main">Portfolio</a></li>
                 <li class="nav-item"><a href="">Collaborate</a></li>
-                <li class="nav-item"><a href="">Contact</a></li>
+                <li class="nav-item"><a href="#footer">Contact</a></li>
             </ul>
         </nav>
         <div class="header">
@@ -57,12 +57,12 @@
             <ul class="nav-items">
                 <li class="nav-item"><a href="#portfolio">Portfolio</a></li>
                 <li class="nav-item"><a href="">Collaborate</a></li>
-                <li class="nav-item"><a href="">Contact</a></li>
+                <li class="nav-item"><a href="#footer">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="main">
     {% block content %}
     {% endblock content %}
     </main>
@@ -72,7 +72,7 @@
             <a href="#header"><i class="fas fa-chevron-up"></i></a>
         </div>
 
-        <div class="footer">
+        <div id="footer" class="footer">
             <div class="personal-info">
                 <div class="photo-of-me">
                     <img src="{% static 'about_me/images/me.jpg' %}" alt="">
