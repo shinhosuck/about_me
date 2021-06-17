@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link type="text/css" rel="stylesheet" href="{% static 'about_me/css/all.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'about_me/style.css' %}">
+    
+    
     <title>
     {% block title %}
         
@@ -45,14 +47,10 @@
                 <a href="#" class="header-hire-me-btn">Hire Me</a>
             </div>
             <div class="header-img">
-                <img src="{% static 'about_me/images/img.jpg' %}" alt="">
+                <img src="{% static 'about_me/images/header_img.jpg' %}" alt="">
             </div>
         </div>
         <nav class="nav">
-            <div class="nav-buttons">
-                <i class="fa fa-bars"></i>
-                <i class="fa fa-times"></i>
-            </div>
             <div class="brand">
                 <a class="brand-name-link" href="{% url 'about_me:home' %}" class="brand-name">Digital <span>Samurai</span></a>
             </div>
@@ -73,6 +71,29 @@
         <div class="scroll-up-button">
             <a href="#header"><i class="fas fa-chevron-up"></i></a>
         </div>
+
+        <div class="footer">
+            <div class="personal-info">
+                <div class="photo-of-me">
+                    <img src="{% static 'about_me/images/me.jpg' %}" alt="">
+                </div>
+                <h2 class="my-name">Eric Anderson</h2>
+                <p class="info-text">I'm front-end & back-end developer. I also specialize in 
+                    Visual Development and UI/UX design.
+                </p>
+                <h2 class="email-me">Email me</h2>
+                <a class="my-email" href="mailto:shinhosuck1973@gamil.com">shinhosuck1973@gamil.com</a>
+            </div>
+            <div class="contact-me">
+                <h2 class="contact-title">Contact me</h2>
+                <p class="contact-text">Looking forward to building something together!</p>
+                <form action="#" class="form-content" >
+                    <input type="email" placeholder="sample@mail.com">
+                    <textarea placeholder="please enter your message"></textarea>
+                    <button>Let's Connect</button>
+                </form>
+            </div>
+        </div>
     </footer>
 
     <script type="text/javascript" src="{% static 'about_me/main.js' %}"></script>
@@ -83,8 +104,6 @@
         const faTimes = document.querySelector(".fa-times")
         const navItemsMobile = document.querySelector(".nav-items-mobile")
         const scrollUpButton = document.querySelector(".scroll-up-button")
-
-        console.log(window.scrollY)
 
         faBars.addEventListener("click", function(){
             faBars.style.display = "none"
@@ -111,7 +130,6 @@
 
         window.addEventListener("scroll", function(){
             if (window.scrollY > 0) {
-                console.log(window.scrollY)
                 navItemsMobile.classList.remove("show-nav-items-mobile")
                 scrollUpButton.classList.add("show-scroll-up-button")
                 faBars.style.display = "block"
