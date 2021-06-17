@@ -1,5 +1,5 @@
 {% extends "about_me/base.html"%}
-
+{% load static %}
 
 
 <title>
@@ -12,7 +12,45 @@
 
 {% block content %}
 <div id="portfolio" class="my-portfolio">
-    <h1 class="portfolio-title">My Portfolio</h1>
+    <h1 class="portfolio-title">My Portfolio <span>click image for more</span></h1>
+    <div class="portfolio-cards">
+        <div class="portfolio-content">
+            <a class="portfolio-image" href="https://aiaiestore.herokuapp.com/" target="_blank">
+                <img src="{% static 'about_me/images/project_img1.png' %}" alt="">
+                <div class="porfolio-image-color-overlay portfolio-first-image">
+                    <i class="fa fa-search"></i>
+                </div>
+            </a>
+            <h2 class="card-title">E-commerce</h2>
+            <p class="card-text">A front-end & back-end project for an e-commerce
+                website using django framework.
+            </p>
+        </div>
+        <div class="portfolio-content">
+            <a class="portfolio-image" href="https://pawpalblog.herokuapp.com/" target="_blank" >
+                <img src="{% static 'about_me/images/project_img2.png' %}" alt="">
+                <div class="porfolio-image-color-overlay">
+                    <i class="fa fa-search"></i>
+                </div>
+            </a>
+            <h2 class="card-title" >Pet Blog</h2>
+            <p class="card-text">A front-end & back-end project for a pet blog
+                website using django framework.
+            </p>
+        </div>
+        <div class="portfolio-content">
+            <a class="portfolio-image" href="https://mydjangomusic.herokuapp.com/" target="_blank">
+                <img src="{% static 'about_me/images/project_img3.png' %}" alt="">
+                <div class="porfolio-image-color-overlay">
+                    <i class="fa fa-search"></i>
+                </div>
+            </a>
+            <h2 class="card-title">Cloud Music</h2>
+            <p class="card-text">A front-end & back-end project for a cloud music
+                website using django framework.
+            </p>
+        </div>
+    </div>
 </div>
 
 {% endblock content %}

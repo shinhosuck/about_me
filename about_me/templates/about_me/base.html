@@ -84,7 +84,7 @@
         const navItemsMobile = document.querySelector(".nav-items-mobile")
         const scrollUpButton = document.querySelector(".scroll-up-button")
 
-        console.log(scrollUpButton)
+        console.log(window.scrollY)
 
         faBars.addEventListener("click", function(){
             faBars.style.display = "none"
@@ -92,6 +92,7 @@
             faTimes.style.display = "block"
             document.body.style.overflow = "hidden"
         })
+
         faTimes.addEventListener("click", function(){
             faBars.style.display = "block"
             navItemsMobile.classList.remove("show-nav-items-mobile")
@@ -120,7 +121,6 @@
             }
             else{
                 scrollUpButton.classList.remove("show-scroll-up-button")
-                console.log(window.scrollY)
             }
         })
     
