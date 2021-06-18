@@ -25,7 +25,7 @@ SECRET_KEY = '7=3*9s@t=bes$i$=f2w8&mltrzgozh90=c3h&u-r1wtwf%c7hw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["192.168.43.107", "192.168.43.163", "127.0.0.1", "ericandersonportfolio.herokuapp.com", " 192.168.43.32"]
+ALLOWED_HOSTS = ["192.168.43.107", "192.168.43.163", "127.0.0.1", "ericandersonportfolio.herokuapp.com", "192.168.43.32"]
 
 
 # Application definition
@@ -65,6 +65,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                "about_me.context_processors.contact_form",
             ],
         },
     },
@@ -83,6 +84,7 @@ DATABASES = {
     }
 }
 
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -129,3 +131,4 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
+

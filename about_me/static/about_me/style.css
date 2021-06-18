@@ -232,7 +232,7 @@ textarea {
 }
 .form-content > button {
     width: 100%;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     padding: 0.8rem;
     text-align: center;
     color: rgb(255, 255, 255);
@@ -242,6 +242,7 @@ textarea {
     border: none;
     letter-spacing: 0.06rem;
     border-radius: 5px;
+    cursor: pointer;
 
 }
 /* end of footer */
@@ -369,6 +370,9 @@ textarea {
         position: absolute;
         padding: 0.5rem;
     }
+    .fa-bars, .fa-times {
+        cursor: pointer;
+    }
     .fa-times {
         display: none;
     }
@@ -389,7 +393,7 @@ textarea {
         white-space: nowrap;
         left: 0;
         transform: translateX(-100%);
-        transition: transform 0.25s ease-in-out;
+        transition: transform 0.05s ease-in-out;
         background: rgba(12, 12, 39, 0.9);
     }
     .show-nav-items-mobile {
@@ -451,6 +455,13 @@ end of base.html
 =========
 home.html
 ========= */
+.message {
+    color:rgb(79, 79, 184);
+    text-align: center;
+    margin-top: 1rem;
+    flex: 0 0 100%;
+    width: 100%
+}
 .my-portfolio {
     margin: 0 auto;
     margin-top: 5rem;
@@ -477,7 +488,7 @@ home.html
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 .portfolio-content {
     flex: 1;
@@ -657,6 +668,7 @@ home.html
     .my-portfolio {
         width: 585px;
         /* width: 90%; */
+        margin-top: 3rem;
     }
     .portfolio-content {
         flex: 0 0 47.2%;

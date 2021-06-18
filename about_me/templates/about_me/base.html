@@ -10,13 +10,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link type="text/css" rel="stylesheet" href="{% static 'about_me/css/all.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'about_me/style.css' %}">
-    
-    
     <title>
     {% block title %}
-        
     {% endblock title %}
     </title>
+
+    <style>
+        .form-content {
+            margin-top: 1rem;
+        }
+        p > label {
+            display: none;
+        }
+        p > input, textarea {
+            display: block;
+            width: 100%;
+            padding: 0.7rem;
+            outline: none;
+            border: none;
+            margin-top: 0rem;
+            border-radius: 5px;
+            margin-bottom: 0.7rem;
+        }
+        /* p > textarea {
+            margin-top: 1rem;
+        } */
+    </style>
 </head>
 <body>
     <header id="header">
@@ -35,6 +54,8 @@
             </ul>
         </nav>
         <div class="header">
+            {% block message %}
+            {% endblock message %}
             <div class="header-text">
                 <h1 class="header-title">Building digital products, brands and 
                     <span>experience.</span>
@@ -64,6 +85,7 @@
 
     <main id="main">
     {% block content %}
+
     {% endblock content %}
     </main>
 
@@ -87,10 +109,12 @@
             <div class="contact-me">
                 <h2 class="contact-title">Contact me</h2>
                 <p class="contact-text">Looking forward to building something together!</p>
-                <form action="#" class="form-content" >
-                    <input type="email" placeholder="sample@mail.com">
-                    <textarea placeholder="please enter your message"></textarea>
-                    <button>Let's Connect</button>
+                <form class="form-content" action="{% url 'about_me:contact' %}" method="POST">
+                    {% csrf_token %}
+                    <!-- <input type="email" placeholder="please enter your email">
+                    <textarea placeholder="please enter your message"></textarea> -->
+                    {{ form.as_p }}
+                    <button type="submit">Let's Connect</button>
                 </form>
             </div>
         </div>
@@ -141,7 +165,11 @@
                 scrollUpButton.classList.remove("show-scroll-up-button")
             }
         })
-    
+        
+        const idEmail = document.querySelector("#id_email")
+        const idMessage = document.querySelector("#id_message")
+        idEmail.placeholder = "Please enter your email"
+        idMessage.placeholder = "Please enter your message"
     </script>
 </body>
 </html>

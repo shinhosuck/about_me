@@ -1,3 +1,4 @@
+
 {% extends "about_me/base.html"%}
 {% load static %}
 
@@ -8,7 +9,13 @@
 {% endblock title %}
 </title>
 
-
+{% block message %}
+    {% if messages %}
+        {% for message in messages %}
+            <h2 class="message">{{ message }}</h2>
+        {% endfor%}
+    {% endif %}
+{% endblock message %}
 
 {% block content %}
 <div id="portfolio" class="my-portfolio">
