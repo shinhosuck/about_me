@@ -1,15 +1,24 @@
-# from django.core.checks import messages
 from about_me.models import Contact
 from django.shortcuts import render, redirect
 from about_me.forms import ContactForm
 from django.contrib import messages
 
 
-def home(request):
-    contacts = Contact.objects.all()
-    for contact in contacts:
-        print(f"Email:{contact.email}\nMessage:{contact.message}")
-    return render(request, "about_me/home.html", {})
+
+
+
+
+
+def index(request):
+    return render(request, "about_me/index.html", {})
+
+
+def my_projects(request):
+    return render(request, "about_me/my_projects.html", {})
+
+
+def about(request):
+    return render(request, "about_me/about.html", {})
 
 
 def contact(request):
@@ -17,10 +26,9 @@ def contact(request):
         form = ContactForm(request.POST or None)
         if form.is_valid():
             form.save()
-            messages.success(request, f"Message sent successfully")
-            # return render(request, "about_me/home.html")
-            return redirect("about_me:home")
+            messages.success(request, f"Thank you very much for the message. I will get back to you as soon as possible.")
+            return redirect("about_me:my_projects")
         else:
-            messages.warning(request, f"Message did not sent. Please try again")
-        return redirect("about_me:home")
+            messages.warning(request, f"Message did not sent. Please try again!")
+        return redirect("about_me:my_projects")
            

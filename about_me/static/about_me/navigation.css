@@ -1,0 +1,137 @@
+
+ .navigation {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 5rem;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.brand-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navigation-buttons {
+    padding: 0 1.2rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    display: none;
+}
+
+.fa-bars, .fa-times {
+    color: var(--light);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.navigation-items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.navigation-items-mobile {
+    display: none;
+}
+
+.brandName-link {
+    display: inline-block;
+    color: var(--light);
+    font-size: 1.6rem;
+    padding: 0 1.2rem;
+    font-weight: 500;
+}
+
+.brandName-link > span {
+    color: rgb(0, 204, 255)
+}
+
+.navigation-link {
+    display: inline-block;
+    padding: 1.2rem;
+    color: var(--light);
+    /* border: 1px solid white; */
+}
+
+.navigation-link:hover {
+    color: var(--gray);
+}
+
+@media (max-width: 680px) {
+    .navigation {
+        position: static;
+        padding: 0 ;
+    }
+
+    .brand-wrapper {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .navigation-buttons {
+        display: flex;
+    }
+
+    .fa-times {
+        display: none;
+    }
+
+    .brandName {
+        margin: 0 auto;
+    }
+
+    .brandName-link {
+        padding: 1rem;
+    }
+
+    .navigation-items {
+        display: none;
+    }
+
+    .navigation-link {
+        font-size: 1.3rem;
+    }
+
+    .navigation-items-mobile {
+        display: block;
+        position: absolute;
+        z-index: 3;
+        transform: translateX(-100%);
+        transition: transform 0.25s ease-in-out;
+        background: rgba(0, 0, 0, 0.7);
+        height: 100vh;
+    }
+
+    .show-navigation-items-mobile {
+        width: 100%;
+        transform: translateX(0);
+        transition: transform 0.25s ease-in-out;
+    }
+
+    .navigation-link {
+        padding: 1rem 1.2rem;
+    }
+
+}
+
+@media (max-width: 410px) {
+    .brand-wrapper {
+        justify-content: space-between;
+    }
+
+    .brandName {
+        margin: 0;
+    }
+
+    .brandName-link {
+        padding-left: 0
+    }
+
+    .navigation-buttons {
+        padding-right: 0;
+    }
+}

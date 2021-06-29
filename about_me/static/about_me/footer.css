@@ -1,0 +1,136 @@
+.footer-conainer {
+    padding: 2rem 0 1.5rem 0;
+    background: rgb(60, 60, 60);
+}
+
+.contact-info {
+    width: 86%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.contact-me {
+    text-align: center;
+    /* border: 1px solid rgb(71, 71, 71) */
+}
+
+.quick-links {
+    color: var(--light);
+    margin-bottom: 1.5rem;
+}
+
+.contact-me > ul > li {
+    margin-bottom: 0.7rem;
+}
+
+.contact-me > ul > li > a {
+    color: rgb(211, 211, 211);
+}
+
+.contact-me > ul > li > a:hover {
+    color: rgb(121, 121, 121);
+}
+
+.contact-me-title {
+    color: var(--light);
+    margin-bottom: 1.5rem;
+}
+
+.contact-me-content {
+    margin-bottom: 1.5rem;
+}
+
+.email, .phone, .linked-in {
+    color: rgb(0, 204, 255);
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+}
+.contact-me-content > p, a {
+    color: rgb(211, 211, 211);
+    font-weight: 300;
+}
+
+a > i {
+    background:rgb(0, 114, 207);
+    padding: 0.6rem 1.5rem;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    transition: background 0.25s linear;
+}
+
+a > i:hover {
+    background:rgb(0, 83, 151);
+    transition: background 0.25s linear;
+}
+
+.contact-title {
+    color: var(--light);
+    margin-bottom: 2rem;
+}
+
+.form-content {
+    text-align: start;
+    border: 1px solid rgb(70, 70, 70);
+    padding: 1.5rem;
+    border-radius: 5px;
+}
+
+.contact-submit {
+    display: inline-block;
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    padding: 0.7rem 1.5rem;
+    color: var(--light);
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgb(0, 140, 158);
+    transition: background 0.25s linear
+}
+
+.contact-submit:hover {
+    background: rgb(0, 68, 80);
+    transition: background 0.25s linear
+}
+
+@media (min-width: 1366px) {
+    .contact-info {
+        width: 1536px;
+    }
+}
+
+@media (max-width: 1366px) {
+    .contact-info {
+        width: 1160px;
+    }
+}
+
+@media (max-width: 1160px) {
+    .contact-info {
+        width: 90%;
+    }
+}
+
+@media (max-width: 900px) {
+    .contact-info {
+        /* width: 50%; */
+        width: 428px;
+        justify-content: center;
+    }
+    .contact-me {
+        flex: 0 0 100%;
+        width: 100%;
+        margin-bottom: 2.5rem;
+    }
+}
+
+@media (max-width: 428px) {
+    .contact-info {
+        width: 90%;
+    }
+}

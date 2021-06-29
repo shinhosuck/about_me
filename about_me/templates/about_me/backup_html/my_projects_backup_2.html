@@ -1,5 +1,5 @@
 
-{% extends "about_me/base.html"%}
+{% extends "about_me/index.html"%}
 {% load static %}
 
 
@@ -9,17 +9,13 @@
 {% endblock title %}
 </title>
 
-{% block message %}
-    {% if messages %}
-        {% for message in messages %}
-            <h2 class="message">{{ message }}</h2>
-        {% endfor%}
-    {% endif %}
-{% endblock message %}
+
+{% block banner %}
+{% endblock banner %}
 
 {% block content %}
-<div id="portfolio" class="my-portfolio">
-    <h1 class="portfolio-title">My Portfolio <span>click image for more</span></h1>
+<div class="my-portfolio">
+    <h1 class="portfolio-title">My Work <span>click image for more</span></h1>
     <div class="portfolio-cards">
         <div class="portfolio-content">
             <a class="portfolio-image" href="https://aiaiestore.herokuapp.com/" target="_blank">
@@ -59,16 +55,17 @@
         </div>
     </div>
 </div>
-<div id="work" class="work-inquire">
+<!-- <div id="work" class="work-inquire">
     <div class="work-inqure-text-content">
         <h2 class="work-inquire-title">Work Inquiry</h2>
-        <p class="work-inquire-text">I'm always open to dicussing your project,
-            improving your online presence or
-            helping you with your brand.
+        <p class="work-inquire-text">
+            I'm always open to dicussing about your project,
+            improving your online presence or helping you with your 
+            brand without breaking your bank account.
         </p>
     </div>
     <div class="work-inquire-button">
         <a href="#">Let's Talk</a>
     </div>
-</div>
+</div> -->
 {% endblock content %}

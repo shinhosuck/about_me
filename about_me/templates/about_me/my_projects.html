@@ -1,0 +1,163 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> 
+    <!-- google font -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" 
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- normalize css -->
+
+    <link type="text/css" rel="stylesheet" href="{% static 'about_me/css/all.min.css' %}">
+    <!-- font awesome css -->
+
+    <link rel="stylesheet" type="text/css" href="{% static 'about_me/style.css' %}">
+    <!-- style css -->
+
+    <link rel="stylesheet" type="text/css" href="{% static 'about_me/navigation.css' %}">
+     <!-- navigation bar css -->
+
+     <link rel="stylesheet" type="text/css" href="{% static 'about_me/footer.css' %}">
+     <!-- footer css -->
+    <title>
+    {% block title %}
+        Projects
+    {% endblock title %}
+    </title>
+</head>
+<body>
+    <header>
+      
+        <div class="projects-header">
+            {% include "about_me/nav.html" %}
+        </div>
+
+    </header>
+
+    <main>
+       
+        {% block content %}
+            
+            <div class="projects">
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="contact-message-wrapper">
+                            <p class="contact-message">{{ message }}</p>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                <!-- <div class="contact-message-wrapper">
+                    <p class="contact-message">Message sent successfully!</p>
+                </div> -->
+                <div class="projects-title">
+                    <h2>Projects <span>currently working on</span></h2>
+                </div>
+
+                <div class="project">
+                    <div class="project-img-wrapper">
+                        <img src="{% static 'about_me/images/project_img1.png' %}" alt="">
+                        <div class="img-color-overlay"></div>
+                    </div>
+                    
+                    <div class="project-text-wrapper">
+                        <h4>E-commerce</h4>
+                        <p>This is an online store where visitors can register and login 
+                            to purchase products ranging from outdoor supplies to home electronics.
+                            The store payment system uses Paypal Payment. This payment System
+                            accepts all major credit cards including ATM cards with crdedit card logos.
+                            <span>Tech stack used: Python, Django, CSS, Javascript.</span>
+                        </p>
+                        <a class="see-website-button" href="https://aiaiestore.herokuapp.com/" target="_blank">See Website</a>
+                    </div>
+
+                </div>
+
+                <div class="project">
+                    <div class="project-img-wrapper">
+                        <img src="{% static 'about_me/images/project_img2.png' %}" alt="">
+                        <div class="img-color-overlay"></div>
+                    </div>
+                    
+                    <div class="project-text-wrapper">
+                        <h4>Pet Blog</h4>
+                        <p>This is a pet blog website where visitors can register and login 
+                            to blog about their favorite furry friends. The bloggers can choose 
+                            a new topic to start a blog or respond to an existing one.
+                            <span>Tech stack used: Python, Django, CSS.</span>
+                        </p>
+                        <a class="see-website-button" href="https://pawpalblog.herokuapp.com/" target="_blank">See Website</a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-img-wrapper">
+                        <img src="{% static 'about_me/images/project_img3.png' %}" alt="">
+                        <div class="img-color-overlay"></div>
+                    </div>
+                    
+                    <div class="project-text-wrapper">
+                        <h4>Cloud Music</h4>
+                        <p>This is a cloud music website where visitors can register and login 
+                            to create music albums.The way it works is that the users upload album covers 
+                            to create albums, then the users upload songs to theirs albums.
+                            <span>Tech stack used: Python, Django, CSS, Javascript.</span>
+                        </p>
+                        <a class="see-website-button" href="https://mydjangomusic.herokuapp.com/" target="_blank">See Website</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+        {% endblock content %}
+      
+    </main>
+    
+    <footer>
+        {% include "about_me/footer.html" %}
+    </footer>
+
+    <script type="text/javascript" src="{% static 'about_me/main.js' %}"></script>
+
+    <script type="text/javascript">
+
+        let barsBtn = document.querySelector(".fa-bars")
+        let timesBtn = document.querySelector(".fa-times")
+        let navigationItems = document.querySelector(".navigation-items-mobile")
+
+        barsBtn.addEventListener("click", function(){
+            timesBtn.style.display = "inline"
+            navigationItems.classList.toggle("show-navigation-items-mobile")
+            barsBtn.style.display = "none"
+            document.body.style.overflow = "hidden"
+        })
+
+        timesBtn.addEventListener("click", function(){
+            timesBtn.style.display = "none"
+            navigationItems.classList.toggle("show-navigation-items-mobile")
+            barsBtn.style.display = "inline"
+            document.body.style.overflow = "scroll"
+        })
+
+        window.addEventListener("resize", function(){
+            if(window.innerWidth > 680){
+                navigationItems.classList.remove("show-navigation-items-mobile")
+                timesBtn.style.display = "none"
+                barsBtn.style.display = "inline"
+                document.body.style.overflow = "scroll"
+
+            }
+        })
+    </script>
+</body>
+</html>
