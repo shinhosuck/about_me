@@ -1,4 +1,5 @@
 {% extends "about_me/my_projects.html" %}
+{% load static %}
 
 
 
@@ -12,8 +13,11 @@
 {% block content %}
 <div class="about">
     <div class="about-wrapper">
+        <div class="profile-img">
+            <img src="{% static 'about_me/images/me.jpg' %}" alt="">
+        </div>
         <div class="about-title">
-            <h2>About Me</h2>
+            <h3>About Me</h3>
         </div>
         <div class="about-text">
             <p>
@@ -23,13 +27,13 @@
                 <br>
                 <br>
                 My life before becoming a developer, I was a chef for over 20 years.
-                As a chef, woking in the hot kitchen taught 2 most import lessons-<span>learn 
+                While being a chef, woking in hot kitchens taught 2 most import lessons-<span>learn 
                 to thrive under pressure, and always strive for excellence.</span>
                 <br>
                 <br>
                 Utilizing above 2 lesosns, about a little more than a year ago, I decided to realize
                 my teenage dream, which was to be a web developer.
-                I taught myself <span>fron-end: CSS and Javascript, and back-end: Python and Django.</span>
+                I taught myself <span>front-end: CSS and Javascript, and back-end: Python and Django.</span>
                 Using technologies I have learned, I strive to create professional, beautiful, user friendly, and responsive website.
             </p>
         </div>

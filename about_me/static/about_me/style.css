@@ -261,7 +261,6 @@ index.html
 
     .header-text-container {
         width: 90%;
-        /* padding-bottom: 7rem; */
     }
 }
 /* end of index.html */
@@ -273,7 +272,6 @@ my_projects.html
 
 .projects {
     padding-top: 7rem;
-    padding-bottom: 1rem;
     position: relative;
 }
 
@@ -326,7 +324,7 @@ my_projects.html
 
 .projects-title > h2 > span {
     font-size: 1rem;
-    color: var(--gray);
+    color: rgb(80, 80, 80);
     display: block;
     margin-top: 0.5rem;
     letter-spacing: 0.05rem;
@@ -346,8 +344,6 @@ my_projects.html
 
 .project-img-wrapper {
     position: relative;
-    /* width: 35%;
-    flex: 0 0 35%; */
     height: 250px;
     width: 250px;
     overflow-y: hidden;
@@ -377,8 +373,6 @@ my_projects.html
 }
 
 .project-text-wrapper {
-    /* width: 60%;
-    flex: 0 0 60%; */
     padding: 0 0 0 1.5rem;
     flex: 1;
 }
@@ -391,7 +385,7 @@ my_projects.html
 .project-text-wrapper > p{
     margin-top: 1rem;
     line-height: 1.5;
-    color: var(--gray)
+    color: rgb(50, 50, 50)
 }
 
 .project-text-wrapper > p > span {
@@ -401,13 +395,14 @@ my_projects.html
 }
 
 .see-website-button {
-    color: var(--light);
-    padding: 0.7rem 1rem;
+    color: rgb(255, 255, 255);
+    padding: 0.8rem 1rem;
     display: inline-block;
     border: none;
     margin-top: 1rem;
-    background: rgb(0, 140, 158);
-    border-radius: 5px;
+    background: rgb(0, 131, 148);
+    border-radius: 8px;
+    letter-spacing: 0.05rem;
     transition: background 0.25s linear
 }
 
@@ -467,11 +462,7 @@ my_projects.html
 }
 
 @media (max-width: 680px) {
-    .projects {
-        /* padding-bottom: 1rem; */
-        /* padding-top: 5.5rem; */
-    }
-
+   
     .project-text-wrapper > p {
         font-size: 1.1rem;
     }
@@ -495,12 +486,11 @@ about.html
 
 .about {
     padding-top: 8rem;
-    padding-bottom: 4rem;
+    padding-bottom: 5rem;
     min-height: 70vh;
 }
 
 .about-wrapper {
-    /* width: 50%; */
     width: 809px;
     margin: 0 auto;
     padding: 1.5rem;
@@ -509,11 +499,19 @@ about.html
 }
 
 .about-title {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+.profile-img {
+    margin-bottom: 1.2rem;
+}
+.profile-img > img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
 }
 
 .about-text > p {
-    color: var(--light_dark);
+    color: rgb(50, 50, 50);
     line-height: 1.6;
 }
 

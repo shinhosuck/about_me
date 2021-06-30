@@ -89,7 +89,7 @@ a > i {
     background:rgb(0, 114, 207);
     padding: 0.6rem 1.5rem;
     font-size: 1.4rem;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: background 0.25s linear;
 }
 
@@ -118,7 +118,6 @@ a > i:hover {
 
 @media (max-width: 900px) {
     .contact-info {
-        /* width: 50%; */
         width: 428px;
         justify-content: center;
     }
