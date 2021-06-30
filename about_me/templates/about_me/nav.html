@@ -1,22 +1,25 @@
 
 
 
+<!-- <div class="navigation-container"> -->
     <nav class="navigation">
-        <div class="brand-wrapper">
-            <div class="navigation-buttons">
-                <i class="fa fa-bars"></i>
-                <i class="fa fa-times"></i>
+        <div class="navigation-wrapper">
+            <div class="brand-wrapper">
+                <div class="navigation-buttons">
+                    <i class="fa fa-bars"></i>
+                    <i class="fa fa-times"></i>
+                </div>
+                <div class="brandName">
+                    <a class="brandName-link" href="{% url 'about_me:index' %}">Digital <span>Samurai</span></a>
+                </div>
             </div>
-            <div class="brandName">
-                <a class="brandName-link" href="{% url 'about_me:index' %}">Digital <span>Samurai</span></a>
-            </div>
-        </div>
 
-        <ul class="navigation-items">
-            <li class="navigation-item"><a class="navigation-link" href="{% url 'about_me:my_projects' %}">Projects</a></li>
-            <li class="navigation-item"><a class="navigation-link" href="{% url 'about_me:about' %}">About</a></li>
-            <!-- <li class="navigation-item"><a class="navigation-link" href="#">Contact</a></li> -->
-        </ul>
+            <ul class="navigation-items">
+                <li class="navigation-item"><a class="navigation-link" href="{% url 'about_me:my_projects' %}">Projects</a></li>
+                <li class="navigation-item"><a class="navigation-link" href="{% url 'about_me:about' %}">About</a></li>
+                <!-- <li class="navigation-item"><a class="navigation-link" href="#">Contact</a></li> -->
+            </ul>
+        </div>
     </nav>
 
     <ul class="navigation-items-mobile">
@@ -24,3 +27,4 @@
         <li class="navigation-item"><a class="navigation-link" href="{% url 'about_me:about' %}">About</a></li>
         <!-- <li class="navigation-item"><a class="navigation-link" href="#">Contact</a></li> -->
     </ul>
+<!-- </div> -->

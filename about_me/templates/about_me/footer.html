@@ -3,20 +3,22 @@
         margin-top: 1rem;
     }
     p > label {
-        color: rgb(214, 213, 213);
+        color: var(--light_gray);
+        font-size: 1.1rem;
     }
     p > input, textarea {
         display: block;
         width: 100%;
-        padding: 0.7rem;
+        padding: 1rem;
         outline: none;
         border: none;
         margin-top: 0.5rem;
-        border-radius: 5px;
+        border-radius: 8px;
         margin-bottom: 0.7rem;
         max-height: 150px;
-        background: rgb(51, 51, 51);
-        color: white
+        background: rgb(70, 70, 70);
+        color: var(--light);
+        resize: vertical;
     }
     /* p > textarea {
         margin-top: 1rem;
@@ -33,9 +35,10 @@
            <ul>
                <li><a href="{% url 'about_me:index' %}">Digtal Samurai</a></li>
                <li><a href="{% url 'about_me:my_projects' %}">Projects</a></li>
-               <li><a href="#">About</a></li>
+               <li><a href="{% url 'about_me:about' %}">About</a></li>
            </ul>
         </div>
+
         <div class="contact-me">
             <h5 class="contact-me-title">Contact Me</h5>
             <div class="contact-me-contents">
@@ -53,13 +56,16 @@
                 </div>
             </div>
         </div>
+
+      
         <div class="contact-me">
             <h5 class="contact-title">Leave a Message</h5>
             <form class="form-content" action="{% url 'about_me:contact' %}" method="POST">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <button class="contact-submit" type="submit">Send</button>
+                <button class="contact-submit" type="submit">Submit Message</button>
             </form>
         </div>
+       
     </div>
 </div>

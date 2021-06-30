@@ -3,6 +3,39 @@
     background: rgb(60, 60, 60);
 }
 
+.contact-title {
+    color: var(--light);
+    margin-bottom: 2rem;
+}
+
+.form-content {
+    text-align: start;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgb(90, 90, 90);
+}
+
+.contact-submit {
+    display: inline-block;
+    width: 100%;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    padding: 1rem 1.5rem;
+    color: var(--light);
+    margin-top: 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    background: rgb(0, 136, 170);
+    letter-spacing: 0.05rem;
+    transition: background 0.25s linear
+}
+
+.contact-submit:hover {
+    background: rgb(0, 68, 80);
+    transition: background 0.25s linear
+}
+
 .contact-info {
     width: 86%;
     margin: 0 auto;
@@ -14,7 +47,6 @@
 
 .contact-me {
     text-align: center;
-    /* border: 1px solid rgb(71, 71, 71) */
 }
 
 .quick-links {
@@ -64,38 +96,6 @@ a > i {
 a > i:hover {
     background:rgb(0, 83, 151);
     transition: background 0.25s linear;
-}
-
-.contact-title {
-    color: var(--light);
-    margin-bottom: 2rem;
-}
-
-.form-content {
-    text-align: start;
-    border: 1px solid rgb(70, 70, 70);
-    padding: 1.5rem;
-    border-radius: 5px;
-}
-
-.contact-submit {
-    display: inline-block;
-    width: 100%;
-    font-size: 1rem;
-    border: none;
-    outline: none;
-    padding: 0.7rem 1.5rem;
-    color: var(--light);
-    margin-top: 0.5rem;
-    border-radius: 5px;
-    cursor: pointer;
-    background: rgb(0, 140, 158);
-    transition: background 0.25s linear
-}
-
-.contact-submit:hover {
-    background: rgb(0, 68, 80);
-    transition: background 0.25s linear
 }
 
 @media (min-width: 1366px) {

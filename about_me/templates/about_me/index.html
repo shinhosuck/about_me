@@ -31,8 +31,7 @@
 </head>
 <body style=" background: rgb(61, 61, 61);">
    
-   <header>
-   
+   <header class="header-section">
        <div class="banner-img">
             <nav class="nav">
                 <div class="brand">
@@ -48,22 +47,20 @@
                 <ul class="nav-items">
                     <li class="nav-item"><a class="nav-link" href="{% url 'about_me:my_projects' %}">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'about_me:about' %}">About</a></li>
-                    <!-- <li class="nav-item"><a class="nav-link" href="#">Contact</a></li> -->
                 </ul>
             </nav>
 
             <ul class="nav-items-mobile">
                 <li class="nav-item"><a class="nav-link" href="{% url 'about_me:my_projects' %}">Projects</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'about_me:about' %}">About</a></li>
-                <!-- <li class="nav-item"><a class="nav-link" href="#">Contact</a></li> -->
             </ul>
 
             <div class="header-text-container">
                 <h1 class="header-title">Hi, I'm Eric.</h1>
-                <h5 class="header-text">
+                <p class="header-text">
                     A web developer in Philippines,
                     based out of San Diego, California USA.
-                </h5>
+                </p>
                 <a href="{% url 'about_me:my_projects' %}" class="hire-me-button">See Projects</a>
             </div>
         </div>
