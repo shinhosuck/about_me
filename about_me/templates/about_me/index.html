@@ -34,20 +34,22 @@
    <header class="header-section">
        <div class="banner-img">
             <nav class="nav">
-                <div class="brand">
-                    <div class="nav-buttons">
-                        <i class="fa fa-bars nav-button"></i>
-                        <i class="fa fa-times nav-button"></i>
+                <div class="nav-landing-page-wrapper">
+                    <div class="brand">
+                        <div class="nav-buttons">
+                            <i class="fa fa-bars nav-button"></i>
+                            <i class="fa fa-times nav-button"></i>
+                        </div>
+                        <div class="brand-name">
+                            <a class="brand-link" href="{% url 'about_me:index' %}">Digital <span>Samurai</span></a>
+                        </div>
                     </div>
-                    <div class="brand-name">
-                        <a class="brand-link" href="{% url 'about_me:index' %}">Digital <span>Samurai</span></a>
-                    </div>
-                </div>
 
-                <ul class="nav-items">
-                    <li class="nav-item"><a class="nav-link" href="{% url 'about_me:my_projects' %}">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'about_me:about' %}">About</a></li>
-                </ul>
+                    <ul class="nav-items">
+                        <li class="nav-item"><a class="nav-link" href="{% url 'about_me:my_projects' %}">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'about_me:about' %}">About</a></li>
+                    </ul>
+                </div>
             </nav>
 
             <ul class="nav-items-mobile">
@@ -77,7 +79,7 @@
     <script type="text/javascript" src="{% static 'about_me/main.js' %}"></script>
 
     <script type="text/javascript">
-
+        
         let faBarsBtn = document.querySelector(".fa-bars")
         let faTimesBtn = document.querySelector(".fa-times")
         let navItems = document.querySelector(".nav-items-mobile")
@@ -105,6 +107,7 @@
 
             }
         })
+
     </script>
 
 </body>
