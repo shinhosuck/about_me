@@ -388,7 +388,6 @@ my_projects.html
 .project-header-text > small {
     display: block;
     font-size: 0.95rem;
-    /* font-weight: 300; */
     color: rgb(170, 170, 170);
     text-align: center;
     letter-spacing: 0.06rem;
