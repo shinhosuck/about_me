@@ -67,6 +67,7 @@
     color: var(--light);
     margin: 0 1rem;
     font-weight: 400;
+    letter-spacing: 0.06rem;
 }
 
 .navigation-link:hover {

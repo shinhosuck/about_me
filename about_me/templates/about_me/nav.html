@@ -1,5 +1,9 @@
 
-
+<style>
+    .active {
+        color: rgb(245, 130, 81);
+    }
+</style>
 
 
     <nav class="navigation">
@@ -13,15 +17,17 @@
                     <a class="brandName-link" href="{% url 'about_me:index' %}">Digital <span>Samurai</span></a>
                 </div>
             </div>
-
+            {% with request.resolver_match.url_name as url_name %}
             <ul class="navigation-items">
-                <li class="navigation-item"><a class="navigation-link" href="{% url 'about_me:my_projects' %}">Projects</a></li>
-                <li class="navigation-item"><a class="navigation-link" href="{% url 'about_me:about' %}">About</a></li>
+                <li class="navigation-item"><a class="navigation-link {% if url_name == 'my_projects' %}active{% endif %}" href="{% url 'about_me:my_projects' %}">Projects</a></li>
+                <li class="navigation-item"><a class="navigation-link {% if url_name == 'about' %}active{% endif %}" href="{% url 'about_me:about' %}">About</a></li>
             </ul>
+            {% endwith %}
         </div>
     </nav>
-
+    {% with request.resolver_match.url_name as url_name %}
     <ul class="navigation-items-mobile">
-        <li class="navigation-item"><a class="navigation-link" href="{% url 'about_me:my_projects' %}">Projects</a></li>
-        <li class="navigation-item"><a class="navigation-link" href="{% url 'about_me:about' %}">About</a></li>
+        <li class="navigation-item"><a class="navigation-link {% if url_name == 'my_projects' %}active{% endif %}" href="{% url 'about_me:my_projects' %}">Projects</a></li>
+        <li class="navigation-item"><a class="navigation-link {% if url_name == 'about' %}active{% endif %}" href="{% url 'about_me:about' %}">About</a></li>
     </ul>
+    {% endwith %}
