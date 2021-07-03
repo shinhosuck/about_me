@@ -4,21 +4,27 @@
     }
     p > label {
         color: var(--light_gray);
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     p > input, textarea {
-        display: block;
+        display: inline-block;
         width: 100%;
-        padding: 0.8rem 1rem 0.8rem 1rem;
+        padding: 0.7rem 1rem;
         outline: none;
         border: none;
         margin-top: 0.5rem;
         border-radius: 8px;
-        margin-bottom: 0.7rem;
-        max-height: 150px;
+        margin-bottom: 0.5rem;
+        /* max-height: 150px; */
         background: rgb(70, 70, 70);
         color: var(--light);
-        resize: vertical;
+        resize: none;
+    }
+
+    p > textarea {
+        height: 100px;
+        display: inline-block;
+        width: 100%;
     }
 </style>
 
