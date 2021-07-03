@@ -43,11 +43,12 @@
     transition: background 0.25s linear
 }
 
-.contact-submit:hover {
-    background: rgb(0, 68, 80);
-    transition: background 0.25s linear
+@media (hover) {
+    .contact-submit:hover {
+        background: rgb(0, 68, 80);
+        transition: background 0.25s linear
+    }
 }
-
 
 .contact-me {
     text-align: center;
@@ -84,12 +85,16 @@
     margin-bottom: 0.3rem;
     font-weight: 700;
 }
-.contact-me-content > p, a {
+.contact-me-content > a {
     color: rgb(211, 211, 211);
     font-weight: 300;
 }
-
-a > i {
+@media (hover) {
+    #email:hover, #phone:hover {
+        color: rgb(255, 255, 255)
+    }
+}
+.contact-me-content > a > i {
     background:rgb(0, 114, 207);
     padding: 0.6rem 1.5rem;
     font-size: 1.4rem;
@@ -97,9 +102,11 @@ a > i {
     transition: background 0.25s linear;
 }
 
-a > i:hover {
-    background:rgb(0, 83, 151);
-    transition: background 0.25s linear;
+@media (hover) {
+    .contact-me-content > a > i:hover {
+        background:rgb(0, 83, 151);
+        transition: background 0.25s linear;
+    }
 }
 
 @media (min-width: 1366px) {

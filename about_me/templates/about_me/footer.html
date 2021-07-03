@@ -47,11 +47,11 @@
             <div class="contact-me-contents">
                 <div class="contact-me-content">
                     <h6 class="email">Email <i class="fa fa-envelope"></i></h6>
-                    <a href="mailto:shinhosuck1973@gmail.com">shinhosuck1973@gmail.com</a>
+                    <a id="email" href="mailto:shinhosuck1973@gmail.com">shinhosuck1973@gmail.com</a>
                 </div>
                 <div class="contact-me-content">
                     <h6 class="phone">Phone <i class="fa fa-phone"></i></h6>
-                    <p>+63 928 689 4014</p>
+                    <a id="phone" href="tel:+63-928-689-4014">+63 928 689 4014</a>
                 </div>
                 <div class="contact-me-content">
                     <h6 class="linked-in">LinkedIn</h6>
@@ -66,7 +66,7 @@
             <form class="form-content" action="{% url 'about_me:contact' %}" method="POST">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <button class="contact-submit" type="submit">Submit Message</button>
+                <button class="contact-submit" type="submit">Send Message</button>
             </form>
         </div>
        

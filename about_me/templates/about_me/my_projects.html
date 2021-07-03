@@ -44,8 +44,10 @@
                     </h1>
                 </div>
                 <div class="project-header-text">
-                    <i class="fa fa-chevron-down"></i>
-                    <small>Scroll down for more</small>
+                    <a href="#projects">
+                        <i class="fa fa-chevron-down"></i>
+                        Scroll down for more
+                    </a>
                 </div>
         </div>
 
@@ -54,8 +56,7 @@
     <main>
        
         {% block content %}
-            
-            <div class="projects">
+            <div id="projects" class="projects">
                 {% if messages %}
                     {% for message in messages %}
                         <div class="contact-message-wrapper">

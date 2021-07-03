@@ -26,8 +26,6 @@
 }
 
 .navigation-buttons {
-    /* padding: 0 1.2rem; */
-    /* margin-right: 1rem; */
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -72,8 +70,10 @@
     letter-spacing: 0.06rem;
 }
 
-.navigation-link:hover {
-    color: var(--gray);
+@media (hover) {
+    .navigation-link:hover {
+        color: var(--gray);
+    }
 }
 
 @media (min-width: 1366px) {

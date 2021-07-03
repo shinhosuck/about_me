@@ -137,8 +137,10 @@ index.html
     color: var(--light);
 }
 
-.nav-link:hover {
-    color: var(--gray);
+@media (hover) {
+    .nav-link:hover {
+        color: var(--gray);
+    }
 }
 
 .header-text-container {
@@ -181,9 +183,11 @@ index.html
     transition: background 0.25s linear;
 }
 
-.hire-me-button:hover {
-    background: rgb(0, 60, 73);
-    transition: background 0.25s linear;
+@media (hover) {
+    .hire-me-button:hover {
+        background: rgb(0, 60, 73);
+        transition: background 0.25s linear;
+    }
 }
 
 @media (max-width: 1366px) {
@@ -362,7 +366,16 @@ my_projects.html
     bottom: 0;
 }
 
-.project-header-text > i {
+.project-header-text > a {
+    display: block;
+    font-size: 0.95rem;
+    color: rgb(170, 170, 170);
+    text-align: center;
+    letter-spacing: 0.06rem;
+    cursor: pointer;
+}
+
+.project-header-text > a > i {
     display: block;
     text-align: center;
     font-size: 1.5rem;
@@ -370,16 +383,14 @@ my_projects.html
     padding-bottom: 0.5rem;
 }
 
-.project-header-text > small {
-    display: block;
-    font-size: 0.95rem;
-    color: rgb(170, 170, 170);
-    text-align: center;
-    letter-spacing: 0.06rem;
+@media (hover) {
+    .project-header-text > a:hover {
+        color: rgb(255, 255, 255);
+    }
 }
 
 .projects {
-    padding-top: 3rem;
+    padding-top: 4rem;
     position: relative;
 }
 
@@ -514,9 +525,11 @@ my_projects.html
     transition: background 0.25s linear
 }
 
-.see-website-button:hover {
-    background: rgb(0, 68, 80);
-    transition: background 0.25s linear
+@media (hover) {
+    .see-website-button:hover {
+        background: rgb(0, 68, 80);
+        transition: background 0.25s linear
+    }
 }
 
 @media (min-width: 1366px) {
