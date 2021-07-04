@@ -122,6 +122,7 @@
     .navigation {
         position: static;
         height: auto;
+        overflow-x: hidden;
     }
 
     .brand-wrapper {
@@ -140,6 +141,10 @@
     .navigation-buttons {
         display: flex;
         padding-left: 1rem;
+    }
+
+    .fa-bars, .fa-times {
+        width: 30px;
     }
 
     .fa-times {

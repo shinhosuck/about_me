@@ -250,6 +250,10 @@ index.html
         padding-left: 1rem;
     }
 
+    .fa-bars, .fa-times {
+        width: 30px;
+    }
+
     .fa-times {
         display: none;
     }

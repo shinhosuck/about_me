@@ -147,14 +147,14 @@
             timesBtn.style.display = "inline"
             navigationItems.classList.toggle("show-navigation-items-mobile")
             barsBtn.style.display = "none"
-            document.body.style.overflow = "hidden"
+            document.body.style.overflowY = "hidden"
         })
 
         timesBtn.addEventListener("click", function(){
             timesBtn.style.display = "none"
             navigationItems.classList.toggle("show-navigation-items-mobile")
             barsBtn.style.display = "inline"
-            document.body.style.overflow = "scroll"
+            document.body.style.overflowY = "auto"
         })
 
         window.addEventListener("resize", function(){
@@ -162,7 +162,7 @@
                 navigationItems.classList.remove("show-navigation-items-mobile")
                 timesBtn.style.display = "none"
                 barsBtn.style.display = "inline"
-                document.body.style.overflow = "scroll"
+                document.body.style.overflowY = "auto"
 
             }
         })
