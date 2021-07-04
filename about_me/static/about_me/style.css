@@ -406,7 +406,7 @@ my_projects.html
     left: 50%;
     transform: translateX(-50%);
     padding: 0.5rem;
-    border-radius: 5px;
+    border-radius: 8px;
     width: 200px;
     display: flex;
     align-items: center;
@@ -431,7 +431,7 @@ my_projects.html
         top: -100%
     }
     to {
-        top: 0;
+        top: 68px;
     }
 }
 
