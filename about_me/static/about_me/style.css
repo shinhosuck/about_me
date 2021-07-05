@@ -399,7 +399,6 @@ my_projects.html
 
 .projects {
     padding-top: 4rem;
-    /* position: relative; */
 }
 
 .contact-message-wrapper {
@@ -465,19 +464,19 @@ my_projects.html
     height: 250px;
     width: 250px;
     overflow-y: hidden;
-    cursor: pointer;
     border-radius: 8px;
     transition: transform 0.3s linear;
 }
-
 .project-img-wrapper > img {
     width: 100%;
     height: auto;
 }
 
-.project-img-wrapper:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s linear;
+@media (hover) {
+    .project-img-wrapper:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s linear;
+    }
 }
 
 .img-color-overlay {
@@ -598,14 +597,16 @@ my_projects.html
         padding: 1.2rem;
         margin-bottom: 1.5rem;
     }
+
+   
+    .project-img-wrapper:hover {
+        transform: scale(1);
+    }
+    
     .project-img-wrapper {
         width: 100;
         flex: 0 0 100%;
         height: 300px
-    }
-
-    .project-img-wrapper:hover {
-        transform: scale(1)
     }
 
     .project-text-wrapper {

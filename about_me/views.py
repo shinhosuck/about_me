@@ -1,10 +1,6 @@
-from about_me.models import Contact
 from django.shortcuts import render, redirect
 from about_me.forms import ContactForm
 from django.contrib import messages
-
-
-
 
 
 
@@ -31,4 +27,12 @@ def contact(request):
         else:
             messages.warning(request, f"Message did not sent. Please try again!")
         return redirect("about_me:my_projects")
-           
+
+
+# def view_img(request):
+#     if request.GET.get("string"):
+#         string = request.GET.get("string")
+#         img_dir = string
+#         print(img_dir)
+#         print(type(img_dir))
+#     return render(request, "about_me/view_img.html", {"img_dir": format_html(img_dir)})
