@@ -70,6 +70,24 @@
 
                 <div class="project">
                     <div class="project-img-wrapper">
+                        <img src="{% static 'about_me/images/project_img3.png' %}" alt="">
+                        <div class="img-color-overlay"></div>
+                    </div>
+                    <!-- old music project -->
+                    <div class="project-text-wrapper">
+                        <h4>Cloud Music</h4>
+                        <p>This is a cloud music website where visitors can register and login
+                            to create music albums. Users upload album covers
+                            to create albums, and then upload songs to theirs albums.
+                            <span>Tech stack used: Python, Django, CSS, Javascript.</span>
+                        </p>
+                        <a class="see-website-button" href="https://djangocloudmusic.herokuapp.com//" target="_blank">See Website</a>
+                    </div>
+                    <!-- end old music project -->
+                </div>
+
+                <div class="project">
+                    <div class="project-img-wrapper">
                         <img src="{% static 'about_me/images/project_img1.png' %}" alt="">
                         <div class="img-color-overlay"></div>
                     </div>
@@ -103,12 +121,13 @@
                     </div>
                 </div>
 
+                {% comment %}
                 <div class="project">
                     <div class="project-img-wrapper">
                         <img src="{% static 'about_me/images/project_img3.png' %}" alt="">
                         <div class="img-color-overlay"></div>
                     </div>
-                    
+                    <!-- old music project -->
                     <div class="project-text-wrapper">
                         <h4>Cloud Music</h4>
                         <p>This is a cloud music website where visitors can register and login 
@@ -118,7 +137,9 @@
                         </p>
                         <a class="see-website-button" href="https://mydjangomusic.herokuapp.com/" target="_blank">See Website</a>
                     </div>
+                    <!-- end old music project -->
                 </div>
+                {% endcomment %}
 
             </div>
 
