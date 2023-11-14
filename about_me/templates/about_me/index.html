@@ -12,11 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> 
     <!-- google font -->
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" 
-        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- normalize css -->
-
     <link type="text/css" rel="stylesheet" href="{% static 'about_me/css/all.min.css' %}">
     <!-- font awesome css -->
 
@@ -32,20 +27,7 @@
 </head>
 <body>
    <header>
-        <div class="projects-header" >
-            {% include "about_me/nav.html" %}
-            <div class="project-header-title">
-                <h1>"Success is Not a Straight Road"
-                    <small>Roy T. Bennett</small>
-                </h1>
-            </div>
-            <div class="project-header-text">
-                <a href="#projects">
-                    <i class="fa fa-chevron-down"></i>
-                    Scroll down for more
-                </a>
-            </div>
-        </div>
+    {% include "about_me/nav.html" %}
    </header>
  
    <main>
@@ -82,11 +64,17 @@
                     toggleBarsBtn.style.display = 'block'
                     toggleTimesBtn.style.display = 'none'
                 }
+                else if(e.target === window) {
+                    navLinks.classList.remove('show-nav-links')
+                    body.style.overflow = 'visible'
+                    toggleBarsBtn.style.display = 'block'
+                    toggleTimesBtn.style.display = 'none'
+                }
             }
 
-            
             toggleBarsBtn.addEventListener('click', handleNavToggleBtnsEvents)
             toggleTimesBtn.addEventListener('click', handleNavToggleBtnsEvents)
+            window.addEventListener('resize', handleNavToggleBtnsEvents)
         }
     </script>
 </body>

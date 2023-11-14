@@ -1,40 +1,50 @@
-
+{% load static %}
 <style>
+
     .active {
         color: rgb(255, 148, 102);
     }
+
 </style>
 
 
     <nav class="navbar">
         <div class="nav-links-container">
-
             <div class="brand-name">
-                <a class="brand-link" href="{% url 'about_me:landing-page' %}">Digital <span>Samurai</span></a>
+                <a class="brand-link" href="{% url 'about_me:landing-page' %}">ericanderson</a>
             </div>
-
             <div class="nav-toggle-btn">
                 <i class="fa fa-bars toggle-bars-btn"></i>
                 <i class="fa fa-times toggle-times-btn"></i>
             </div>
-
-           
             <nav class="nav-links">
                 {% with request.resolver_match.url_name as url_name %}
                     <a class="nav-link {% if url_name == 'my_projects' %}active{% endif %}" href="{% url 'about_me:my_projects' %}">Projects</a>
                     <a class="nav-link {% if url_name == 'about' %}active{% endif %}" href="{% url 'about_me:about' %}">About</a>
                 {% endwith %}
             </nav>
-            
-
         </div>
+
+        <div class="hero-container">
+            <div class="hero-image">
+                <img src="{% static 'about_me/images/person.webp' %}" alt="">
+            </div>
+            <div class="hero-text-container">
+                <div class="hero-header">
+                    <h1 class="hero-text-header">
+                        Nice to meet you!
+                        <span>I'm <span>Eric Anderson</span>.</span>
+                    </h1>
+                </div>
+                <div class="hero-text-content">
+                    <p>
+                        Based in Sacramento, CA, USA, I'm a full-stack developer passionate about building web apps that users love.
+                    </p>
+                </div>
+                <a class="hero-contact-me-btn" href="">Contact me</a>
+            </div>
+        </div>
+
     </nav>
 
-    {% comment %}
-    {% with request.resolver_match.url_name as url_name %}
-    <ul class="navigation-items-mobile">
-        <li class="navigation-item"><a class="navigation-link {% if url_name == 'my_projects' %}active{% endif %}" href="{% url 'about_me:my_projects' %}">Projects</a></li>
-        <li class="navigation-item"><a class="navigation-link {% if url_name == 'about' %}active{% endif %}" href="{% url 'about_me:about' %}">About</a></li>
-    </ul>
-    {% endwith %}
-    {% endcomment %}
+   

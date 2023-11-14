@@ -7,65 +7,81 @@
 
        
 {% block content %}
-
+<div class="projects-main">
     <div id="projects" class="projects">
-        <div class="projects-title">
-            <h2>Current Projects</h2>
+        <div class="projects-header-container">
+            <h1 class="project-header">Projects</h1>
         </div>
 
         <div class="project">
             <div class="project-img-wrapper">
-                <img src="{% static 'about_me/images/project_img3.webp' %}" alt="">
+                <img src="{% static 'about_me/images/e-commerce.webp' %}" alt="">
                 <div class="img-color-overlay"></div>
             </div>
             <!-- old music project -->
             <div class="project-text-wrapper">
-                <h4>Cloud Music</h4>
-                <p>This is a cloud music website where visitors can register and login
-                    to create music albums. Users upload album covers
-                    to create albums, and then upload songs to theirs albums.
-                    <span>Tech stack used: Python, Django, CSS, Javascript.</span>
+                <h4>Ecommerce</h4>
+                <div class="tech-stacks-used">
+                    <h4>Python</h4>
+                    <h4>Django</h4>
+                    <h4>HTML</h4>
+                    <h4>CSS</h4>
+                    <h4>Javascript</h4>
+                </div>
+                <p>This is an online store where visitors can register and login 
+                    to purchase products ranging from desktop pc to various electronics accessories.
+                    The store uses stripe payment system, which accepts all major credit cards, including ATM cards with credit card logos.
                 </p>
-                <a class="see-website-button" href="" target="_blank">See Website</a>
+                <a class="see-website-button" href="https://aiaimarket.pythonanywhere.com" target="_blank">View project</a>
             </div>
             <!-- end old music project -->
         </div>
 
         <div class="project">
             <div class="project-img-wrapper">
-                <img src="{% static 'about_me/images/project_img1.webp' %}" alt="">
+                <img src="{% static 'about_me/images/cloud-music.webp' %}" alt="">
                 <div class="img-color-overlay"></div>
             </div>
             
             <div class="project-text-wrapper">
-                <h4>E-commerce</h4>
-                <p>This is an online store where visitors can register and login 
-                    to purchase products ranging from outdoor supplies to home electronics.
-                    The store uses Paypal payment system, which accepts all major credit cards, including ATM cards with credit card logos.
-                    <span>Tech stack used: Python, Django, CSS, Javascript.</span>
+                <h4>Cloud Music</h4>
+                <div class="tech-stacks-used">
+                    <h4>Python</h4>
+                    <h4>Django</h4>
+                    <h4>HTML</h4>
+                    <h4>CSS</h4>
+                    <h4>Javascript</h4>
+                </div>
+                <p>This is a cloud music website where visitors can register and login
+                    to create music albums. Users upload album covers
+                    to create albums, and then upload songs to theirs albums.
                 </p>
-                <a class="see-website-button" href="" target="_blank">See Website</a>
+                <a class="see-website-button" href="" target="_blank">View project</a>
             </div>
 
         </div>
 
         <div class="project">
             <div class="project-img-wrapper">
-                <img src="{% static 'about_me/images/project_img2.webp' %}" alt="">
+                <img src="{% static 'about_me/images/pet-blog.webp' %}" alt="">
                 <div class="img-color-overlay"></div>
             </div>
-            
             <div class="project-text-wrapper">
                 <h4>Pet Blog</h4>
+                <div class="tech-stacks-used">
+                    <h4>Python</h4>
+                    <h4>Django</h4>
+                    <h4>HTML</h4>
+                    <h4>CSS</h4>
+                </div>
                 <p>This is a pet blog website where visitor can register and login 
                     to blog about their favorite furry friends. The blogger can choose 
                     a new topic to start a blog or respond to an existing one.
-                    <span>Tech stack used: Python, Django, CSS.</span>
                 </p>
-                <a class="see-website-button" href="" target="_blank">See Website</a>
+                <a class="see-website-button" href="" target="_blank">View project</a>
             </div>
         </div>
     </div>
-
+</div>
 {% endblock content %}
 
