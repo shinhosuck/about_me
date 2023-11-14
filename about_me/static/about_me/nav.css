@@ -1,0 +1,101 @@
+
+ .navbar {
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+}
+
+.nav-links-container {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    justify-content: space-between;
+}
+
+
+.brand-name >
+.brand-link {
+    color: var(--light);
+    font-size: 1.3rem;
+}
+
+.brand-link > span {
+    color: rgb(0, 204, 255)
+}
+
+.nav-toggle-btn > .fa-bars,
+.nav-toggle-btn > .fa-times {
+    color: var(--light);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-toggle-btn > .fa-times {
+    display: none;
+}
+
+.nav-links {
+    position: absolute;
+    z-index: 2;
+    top: 56px;
+    right: 0;
+    height: 100vh;
+    width: 0;
+    display: grid;
+    gap: 2rem;
+    align-content: start;
+    justify-content: end;
+    overflow: hidden;
+    white-space: nowrap;
+    opacity: 0;
+    transition: width 200ms linear;
+}
+
+.show-nav-links {
+    width: 100vw;
+    opacity: 1;
+    padding: 2rem;
+    background:rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.nav-link {
+    color: var(--light);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+@media (hover) {
+    .navigation-link:hover {
+        color: var(--gray);
+    }
+}
+
+
+@media screen and (min-width: 500px) {
+    .nav-toggle-btn {
+        display: none;
+    }
+
+    .nav-links-container {
+        width: 90%;
+    }
+
+    .nav-links {
+        position: initial;
+        height: auto;
+        width: auto;
+        display: flex;
+        gap: 2rem;
+        align-content: center;
+        justify-content: space-between;
+        overflow: visible;
+        white-space: wrap;
+        opacity: 1;
+        transition: none;
+    }
+
+}

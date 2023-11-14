@@ -1,9 +1,9 @@
-*,
-*::before,
-*::after{
-    box-sizing: border-box;
+::before,
+::after,
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 h1 {font-size: 3.25rem;}
@@ -13,16 +13,25 @@ h4 {font-size: 1.75rem;}
 h5 {font-size: 1.35rem;}
 h6 {font-size: 1rem;}
 
-html {scroll-behavior: smooth;}
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Roboto', sans-serif;
     background: rgb(230, 230, 230);
 }
 
-a {text-decoration: none;}
 
-li {list-style-type: none;}
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+li {
+    list-style-type: none;
+}
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
@@ -44,17 +53,15 @@ p, li, a, button{
 }
 
 
-/*========
-index.html
-==========*/
+/* ==============
+LANDING_PAGE.HTML
+================= */
 
 .header-section {
-    /* background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), 
-    url("images/header_img.jpg"); */
     background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), 
-    url("images/header_img.jpg");
-    height: 100vh;
-    width: 100%;
+    url("images/landing_page.webp");
+    min-height: 100vh;
+    /* width: 100%; */
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -102,7 +109,7 @@ index.html
     display: none;
 }
 
-.fa-bars, .fa-times {
+.landing-page-fa-bars, .landing-page-fa-times {
     color: var(--light);
     font-size: 1.7rem;
     cursor: pointer;
@@ -118,7 +125,7 @@ index.html
     display: none;
 }
 
-.brand-link {
+.landing-page-brand-link {
     display: inline-block;
     color: var(--light);
     font-size: 1.6rem;
@@ -130,7 +137,7 @@ index.html
     color: rgb(0, 204, 255)
 }
 
-.nav-link {
+.landing-page-nav-link {
     display: inline-block;
     padding: 1.5rem 0;
     margin: 0 1.5rem;
@@ -140,7 +147,7 @@ index.html
 }
 
 @media (hover) {
-    .nav-link:hover {
+    .landing-page-nav-link:hover {
         color: var(--gray);
     }
 }
@@ -252,23 +259,23 @@ index.html
         padding-left: 1rem;
     }
 
-    .fa-bars, .fa-times {
+    .landing-page-fa-bars, .landing-page-fa-times {
         width: 30px;
     }
 
-    .fa-times {
+    .landing-page-fa-times {
         display: none;
     }
 
-    .brand-name {
+    .landing-page-brand-name {
         margin: 0 auto;
     }
 
-    .brand-link {
+    .landing-page-brand-link {
         padding: 1rem 0;
     }
 
-    .nav-link {
+    .landing-page-nav-link {
         font-size: 1.3rem;
         padding: 1rem 0;
     }
@@ -303,11 +310,11 @@ index.html
 }
 @media (max-width: 410px) {
 
-    .brand-name {
+    .landing-page-brand-name {
         margin: 0 auto;
     }
 
-    .brand-link {
+    .landing-page-brand-link {
         padding-left: 0
     }
 
@@ -319,9 +326,6 @@ index.html
         width: 90%;
     }
 }
-/*===============
-end of index.html 
-=================*/
 
 /*==============
 my_projects.html 
@@ -329,14 +333,11 @@ my_projects.html
 
 .projects-header {
     height: 100vh;
-    width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),
-                url("images/road.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.5)),
+                url("images/mobile-road.webp");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    overflow: hidden;
 }
 
 .project-header-title {
@@ -652,6 +653,17 @@ my_projects.html
     }
 }
 
+
+@media screen and (min-width: 800px) {
+    .projects-header {
+        height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.5)),
+                    url("images/road.webp");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+}
 /* 
 ==========
 about.html

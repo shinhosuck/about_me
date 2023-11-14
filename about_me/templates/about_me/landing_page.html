@@ -1,0 +1,111 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> 
+    <!-- google font -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" 
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- normalize css -->
+
+    <link type="text/css" rel="stylesheet" href="{% static 'about_me/css/all.min.css' %}">
+    <!-- font awesome css -->
+
+    <link rel="stylesheet" type="text/css" href="{% static 'about_me/style.css' %}">
+    <!-- style css -->
+    
+    <title>
+    Portfolio
+    </title>
+</head>
+<body>
+   <header class="header-section">
+       <div class="banner-img">
+            <nav class="nav">
+                <div class="nav-landing-page-wrapper">
+                    <div class="brand">
+                        <div class="nav-buttons">
+                            <i class="fa fa-bars landing-page-fa-bars nav-button"></i>
+                            <i class="fa fa-times landing-page-fa-times nav-button"></i>
+                        </div>
+                        <div class="landing-page-brand-name">
+                            <a class="landing-page-brand-link" href="{% url 'about_me:landing-page' %}">Digital <span>Samurai</span></a>
+                        </div>
+                    </div>
+
+                    <ul class="nav-items">
+                        <li class="nav-item"><a class="landing-page-nav-link" href="{% url 'about_me:my_projects' %}">Projects</a></li>
+                        <li class="nav-item"><a class="landing-page-nav-link" href="{% url 'about_me:about' %}">About</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <ul class="nav-items-mobile">
+                <li class="nav-item"><a class="landing-page-nav-link" href="{% url 'about_me:my_projects' %}">Projects</a></li>
+                <li class="nav-item"><a class="landing-page-nav-link" href="{% url 'about_me:about' %}">About</a></li>
+            </ul>
+
+            <div class="header-text-container">
+                <h1 class="header-title">Hi, I'm Eric.</h1>
+                <p class="header-text">
+                    A web developer in Philippines,
+                    based out of San Diego, California USA.
+                </p>
+                <a href="{% url 'about_me:my_projects' %}" class="hire-me-button">See Projects</a>
+            </div>
+        </div>
+   </header>
+ 
+   <main>
+
+   </main>
+    <footer>
+
+    </footer>
+
+
+    <script type="text/javascript" src="{% static 'about_me/main.js' %}"></script>
+
+    <script type="text/javascript">
+        
+        let faBarsBtn = document.querySelector(".landing-page-fa-bars")
+        let faTimesBtn = document.querySelector(".landing-page-fa-times")
+        let navItems = document.querySelector(".nav-items-mobile")
+
+        faBarsBtn.addEventListener("click", function(){
+            faTimesBtn.style.display = "inline"
+            navItems.classList.add("show-nav-items-mobile")
+            faBarsBtn.style.display = "none"
+            document.body.style.overflow = "hidden"
+        })
+
+        faTimesBtn.addEventListener("click", function(){
+            faTimesBtn.style.display = "none"
+            navItems.classList.remove("show-nav-items-mobile")
+            faBarsBtn.style.display = "inline"
+            document.body.style.overflow = "scroll"
+        })
+
+        window.addEventListener("resize", function(){
+            if(window.innerWidth > 660){
+                navItems.classList.remove("show-nav-items-mobile")
+                faTimesBtn.style.display = "none"
+                faBarsBtn.style.display = "inline"
+                document.body.style.overflow = "scroll"
+
+            }
+        })
+
+    </script>
+
+</body>
+</html>

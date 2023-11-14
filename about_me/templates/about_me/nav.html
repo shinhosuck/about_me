@@ -6,28 +6,35 @@
 </style>
 
 
-    <nav class="navigation">
-        <div class="navigation-wrapper">
-            <div class="brand-wrapper">
-                <div class="navigation-buttons">
-                    <i class="fa fa-bars"></i>
-                    <i class="fa fa-times"></i>
-                </div>
-                <div class="brandName">
-                    <a class="brandName-link" href="{% url 'about_me:index' %}">Digital <span>Samurai</span></a>
-                </div>
+    <nav class="navbar">
+        <div class="nav-links-container">
+
+            <div class="brand-name">
+                <a class="brand-link" href="{% url 'about_me:landing-page' %}">Digital <span>Samurai</span></a>
             </div>
-            {% with request.resolver_match.url_name as url_name %}
-            <ul class="navigation-items">
-                <li class="navigation-item"><a class="navigation-link {% if url_name == 'my_projects' %}active{% endif %}" href="{% url 'about_me:my_projects' %}">Projects</a></li>
-                <li class="navigation-item"><a class="navigation-link {% if url_name == 'about' %}active{% endif %}" href="{% url 'about_me:about' %}">About</a></li>
-            </ul>
-            {% endwith %}
+
+            <div class="nav-toggle-btn">
+                <i class="fa fa-bars toggle-bars-btn"></i>
+                <i class="fa fa-times toggle-times-btn"></i>
+            </div>
+
+           
+            <nav class="nav-links">
+                {% with request.resolver_match.url_name as url_name %}
+                    <a class="nav-link {% if url_name == 'my_projects' %}active{% endif %}" href="{% url 'about_me:my_projects' %}">Projects</a>
+                    <a class="nav-link {% if url_name == 'about' %}active{% endif %}" href="{% url 'about_me:about' %}">About</a>
+                {% endwith %}
+            </nav>
+            
+
         </div>
     </nav>
+
+    {% comment %}
     {% with request.resolver_match.url_name as url_name %}
     <ul class="navigation-items-mobile">
         <li class="navigation-item"><a class="navigation-link {% if url_name == 'my_projects' %}active{% endif %}" href="{% url 'about_me:my_projects' %}">Projects</a></li>
         <li class="navigation-item"><a class="navigation-link {% if url_name == 'about' %}active{% endif %}" href="{% url 'about_me:about' %}">About</a></li>
     </ul>
     {% endwith %}
+    {% endcomment %}
