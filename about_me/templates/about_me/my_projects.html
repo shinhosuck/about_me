@@ -7,6 +7,32 @@
 
        
 {% block content %}
+<div class="tech-stack-main">
+    <div class="tech-stack-container">
+        <div class="tech-stack-text">
+            <h2>Python</h2>
+            <p>3 Years of Experience</p>
+        </div>
+        <div class="tech-stack-text">
+            <h2>Django</h2>
+            <p>3 Years of Experience</p>
+        </div>
+        <div class="tech-stack-text">
+            <h2>HTML</h2>
+            <p>3 Years of Experience</p>
+        </div>
+        <div class="tech-stack-text">
+            <h2>CSS</h2>
+            <p>3 Years of Experience</p>
+        </div>
+        <div class="tech-stack-text">
+            <h2>Javascript</h2>
+            <p>2 Years of Experience</p>
+        </div>
+    </div>
+</div>
+
+
 <div class="projects-main">
     <div id="projects" class="projects">
         <div class="projects-header-container">
@@ -15,10 +41,10 @@
 
         <div class="project">
             <div class="project-img-wrapper">
-                <img src="{% static 'about_me/images/e-commerce.webp' %}" alt="">
+                <img class="lg-image" src="{% static 'about_me/images/e-commerce.webp' %}" alt="">
+                <img class="sm-image" src="{% static 'about_me/images/small-e-commerce.webp' %}" alt="">
                 <div class="img-color-overlay"></div>
             </div>
-            <!-- old music project -->
             <div class="project-text-wrapper">
                 <h4>Ecommerce</h4>
                 <div class="tech-stacks-used">
@@ -28,18 +54,19 @@
                     <h4>CSS</h4>
                     <h4>Javascript</h4>
                 </div>
+                <a class='view-code' href="https://github.com/shinhosuck/e-commerce" target="_blank">View Code</a>
                 <p>This is an online store where visitors can register and login 
                     to purchase products ranging from desktop pc to various electronics accessories.
                     The store uses stripe payment system, which accepts all major credit cards, including ATM cards with credit card logos.
                 </p>
                 <a class="see-website-button" href="https://aiaimarket.pythonanywhere.com" target="_blank">View project</a>
             </div>
-            <!-- end old music project -->
         </div>
 
         <div class="project">
             <div class="project-img-wrapper">
-                <img src="{% static 'about_me/images/cloud-music.webp' %}" alt="">
+                <img class="lg-image" src="{% static 'about_me/images/cloud-music.webp' %}" alt="">
+                <img class="sm-image" src="{% static 'about_me/images/small-cloud-music.webp' %}" alt="">
                 <div class="img-color-overlay"></div>
             </div>
             
@@ -52,18 +79,19 @@
                     <h4>CSS</h4>
                     <h4>Javascript</h4>
                 </div>
+                <a class='view-code' href="https://github.com/shinhosuck/myCloudMusic" target="_blank">View Code</a>
                 <p>This is a cloud music website where visitors can register and login
                     to create music albums. Users upload album covers
                     to create albums, and then upload songs to theirs albums.
                 </p>
                 <a class="see-website-button" href="" target="_blank">View project</a>
             </div>
-
         </div>
 
         <div class="project">
             <div class="project-img-wrapper">
-                <img src="{% static 'about_me/images/pet-blog.webp' %}" alt="">
+                <img class="lg-image" src="{% static 'about_me/images/pet-blog.webp' %}" alt="">
+                <img class="sm-image" src="{% static 'about_me/images/small-pet-blog.webp' %}" alt="">
                 <div class="img-color-overlay"></div>
             </div>
             <div class="project-text-wrapper">
@@ -74,6 +102,7 @@
                     <h4>HTML</h4>
                     <h4>CSS</h4>
                 </div>
+                <a class='view-code' href="https://github.com/shinhosuck/DjangoPetBlog" target="_blank">View Code</a>
                 <p>This is a pet blog website where visitor can register and login 
                     to blog about their favorite furry friends. The blogger can choose 
                     a new topic to start a blog or respond to an existing one.
@@ -81,6 +110,7 @@
                 <a class="see-website-button" href="" target="_blank">View project</a>
             </div>
         </div>
+
     </div>
 </div>
 {% endblock content %}

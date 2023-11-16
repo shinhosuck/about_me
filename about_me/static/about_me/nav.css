@@ -14,11 +14,11 @@
 
 .nav-links-container {
     width: 90%;
-    max-width: 1400px;
+    max-width: 1100px;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     justify-content: space-between;
 }
 
@@ -47,7 +47,7 @@
     height: 100vh;
     width: 0;
     display: grid;
-    gap: 2rem;
+    gap: 1.5rem;
     align-content: start;
     justify-content: end;
     overflow: hidden;
@@ -67,9 +67,7 @@
 
 .nav-link {
     color: var(--light);
-    font-size: 0.9rem;
-    font-weight: 500;
-    text-transform: uppercase;
+    font-size: 1.5rem;
 }
 
 @media (hover) {
@@ -89,13 +87,12 @@
     display: block;
     width: 100%;
     height: auto;
-    border-radius: 30px;
 }
 
 .hero-text-container {
     display: grid;
     align-content: start;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .hero-header {
@@ -117,13 +114,13 @@
 }
 
 .hero-text-header > span > span {
-    border-bottom: 3px solid rgb(0, 131, 148);
+    border-bottom: 3px solid rgb(24, 188, 209);
 }
 
 .hero-text-content > p {
     max-width: 400px;
     margin: 0 auto;
-    line-height: 1.5;
+    line-height: 1.6;
     letter-spacing: 0.09rem;
     text-align: center;
     color: rgb(202, 202, 202);
@@ -139,6 +136,7 @@
     letter-spacing: 0.05rem;
     text-align: center;
     text-transform: uppercase;
+    font-size: 0.9rem;
 }
 
 @media screen and (min-width: 600px) {
@@ -151,7 +149,7 @@
         height: auto;
         width: auto;
         display: flex;
-        gap: 2rem;
+        gap: 1.5rem;
         align-content: center;
         justify-content: space-between;
         overflow: visible;
@@ -169,13 +167,14 @@
     }
 
     .hero-container {
-        align-items: center;
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 1400px;
+        align-items: start;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1100px;
+        gap: 1rem;
     }
 
     .hero-image {
-        grid-column: 2 / span 1;
+        grid-column: 2 / sapn 1;
     }
 
     .hero-text-container {
@@ -185,21 +184,22 @@
 
     .hero-header {
         margin: 0;
+        max-width: initial;
     }
 
     .hero-text-header {
         text-align: start;
-        font-size: 2.2rem;
+        font-size: 2.1rem;
     }
 
     .hero-text-content > p {
         text-align: start;
-        margin: 0
-
+        margin: 0;
     }
 
     .hero-contact-me-btn {
-        justify-self: start
+        justify-self: start;
+        margin-top: 1.5rem
     }
 }
 
@@ -210,7 +210,7 @@
     }
 
     .hero-text-header {
-        font-size: 2.9rem;
+        font-size: 2.8rem;
     }
 
     .hero-text-content > p {
@@ -219,8 +219,13 @@
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
+
+    .hero-container {
+        margin: 3rem auto 4rem auto;
+    }
+
     .hero-text-header {
-        font-size: 3.9rem;
+        font-size: 3.3rem;
     }
 }

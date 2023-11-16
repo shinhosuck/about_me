@@ -1,74 +1,38 @@
-<style>
-    .form-content {
-        margin-top: 1rem;
-    }
-    p > label {
-        color: var(--light_gray);
-        font-size: 1rem;
-    }
-    p > input, textarea {
-        display: inline-block;
-        width: 100%;
-        padding: 0.7rem 1rem;
-        outline: none;
-        border: none;
-        margin-top: 0.5rem;
-        border-radius: 8px;
-        margin-bottom: 0.5rem;
-        /* max-height: 150px; */
-        background: rgb(70, 70, 70);
-        color: var(--light);
-        resize: none;
-    }
-
-    p > textarea {
-        height: 100px;
-        display: inline-block;
-        width: 100%;
-    }
-</style>
-
-
-
-
 <div class="footer-conainer">
     <div class="contact-info">
-        <div class="contact-me">
-            <h5 class="quick-links">Quick Links</h5>
-           <ul>
-               <li><a href="{% url 'about_me:landing-page' %}">Digtal Samurai</a></li>
-               <li><a href="{% url 'about_me:my_projects' %}">Projects</a></li>
-               <li><a href="{% url 'about_me:about' %}">About</a></li>
-           </ul>
+        <div class="footer-header-container">
+            <h1 class="footer-header">Contact</h1>
+            <p>
+                I would love to hear about your project and how I could help.
+                Please contact me via email, phone, or just simply fill out the form below, and
+                I'll get back to you as soon as possible. Thank you very much.
+            </p>
         </div>
-
-        <div class="contact-me">
-            <h5 class="contact-me-title">Contact Me</h5>
-            <div class="contact-me-contents">
-                <div class="contact-me-content">
-                    <h6 class="email">Email <i class="fa fa-envelope"></i></h6>
-                    <a id="email" href="mailto:shinhosuck1973@gmail.com">shinhosuck1973@gmail.com</a>
-                </div>
-                <div class="contact-me-content">
-                    <h6 class="phone">Phone <i class="fa fa-phone"></i></h6>
-                    <a id="phone" href="tel:+63-928-689-4014">+63 928 689 4014</a>
-                </div>
-                <div class="contact-me-content">
-                    <h6 class="linked-in">LinkedIn</h6>
-                    <a href="https://www.linkedin.com/in/eric-anderson-a6b906214/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                </div>
+        <div class="contact-container">
+            <div class="contact-form">
+                <form class="message-form" action="{% url 'about_me:contact' %}" method="POST">
+                    {% csrf_token %}
+                    {{ form }}
+                    <button class="contact-submit" type="submit">Send Message</button>
+                </form>
+            </div>
+            <div class="email-container">
+                <h3 class="email">Email <i class="fa fa-envelope"></i></h3>
+                <a id="email" href="mailto:shinhosuck1973@gmail.com">shinhosuck1973@gmail.com</a>
+            </div>
+            <div class="phone-number-container">
+                <h3 class="phone">Phone <i class="fa fa-phone"></i></h3>
+                <a id="phone" href="tel:+63-928-689-4014">+63 969 352 7097</a>
             </div>
         </div>
-
-      
-        <div class="contact-me">
-            <h5 class="contact-title">Leave a Message</h5>
-            <form class="form-content" action="{% url 'about_me:contact' %}" method="POST">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button class="contact-submit" type="submit">Send Message</button>
-            </form>
+    </div>
+</div>
+<div class="footer-container-2">
+    <div class="social-links-container">
+        <h3>ericanderson</h3>
+        <div class="social-links">
+            <a href="https://github.com/shinhosuck" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/eric-anderson-a6b906214/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
         </div>
-       
     </div>
 </div>

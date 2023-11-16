@@ -5,16 +5,8 @@ from django.contrib import messages
 
 
 
-def landing_page_view(request):
-    return render(request, "about_me/landing_page.html")
-
-
 def my_projects(request):
     return render(request, "about_me/my_projects.html")
-
-
-def about(request):
-    return render(request, "about_me/about.html")
 
 
 def contact(request):
