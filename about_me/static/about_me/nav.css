@@ -170,11 +170,12 @@
         align-items: start;
         grid-template-columns: 1fr 1fr;
         max-width: 1100px;
-        gap: 1rem;
     }
 
     .hero-image {
         grid-column: 2 / sapn 1;
+        max-width: 450px;
+        margin: 0 0 0 auto;
     }
 
     .hero-text-container {
@@ -226,6 +227,27 @@
     }
 
     .hero-text-header {
-        font-size: 3.3rem;
+        font-size: 3.1rem;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+
+    .hero-text-header {
+        font-size: 3.4rem;
+    }
+}
+
+@media screen and (min-width: 1150px) {
+
+    .hero-text-header {
+        font-size: 3.6rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .hero-text-header {
+        font-size: 3.8rem;
     }
 }
