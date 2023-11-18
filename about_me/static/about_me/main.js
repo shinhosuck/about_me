@@ -37,3 +37,25 @@ if(toggleBarsBtn && toggleTimesBtn) {
 }
 
 // END MOBILE NAVIGATION BAR
+
+// INDEX PAGE, MESSAGE RECEIVED CONTAINER 
+
+const messageReceivedContainer = document.querySelector('.message-received-container')
+const messageReceivedCloseBtn = document.querySelector('.message-received-close-btn')
+
+if(messageReceivedContainer) {
+
+    const id1 = setTimeout(() => {
+        messageReceivedCloseBtn.style.opacity = '1'
+        clearTimeout(id1)
+    }, 2000);
+
+    const id2 = setTimeout(() => {
+        messageReceivedContainer.style.display = 'none'
+        clearTimeout(id2)
+    }, 10000);
+}
+
+messageReceivedCloseBtn.addEventListener('click', (e) => {
+    messageReceivedContainer.style.display = 'none'
+})

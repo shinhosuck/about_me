@@ -22,7 +22,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG')
 
 
-ALLOWED_HOSTS = ['127.0.0.1', '192.168.198.37', 'ericanderson.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', '192.168.198.37', 'andersonPortfolio.pythonanywhere.com']
 
 
 # Application definition

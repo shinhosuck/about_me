@@ -44,6 +44,69 @@ main {
     background: rgb(20, 20, 20);
 }
 
+/* ========
+ index.html 
+ ========== */
+
+ .message-received-container {
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 90%;
+    max-width: 400px;
+    padding: 1.3rem;
+
+    display: grid;
+    gap: 0.5rem;
+
+    animation-name: dropMessage;
+    animation-duration: 1300ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.message-received-close-btn {
+    color: white;
+    justify-self: end;
+    opacity: 0;
+    transition: opacity 200ms linear;
+    width: 25px;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    background: rgb(0, 131, 148)
+}
+
+.received-message {
+    color: white;
+    letter-spacing: 0.09rem;
+    line-height: 1.7;
+    font-size: 1rem;
+    text-wrap: balance;
+    text-align: center;
+    font-weight: initial;
+    padding: 1.3rem;
+    border-radius: 10px;
+    background: rgb(50, 50, 50);
+    box-shadow: 5px 5px 25px -1px rgb(24, 24, 24);
+}
+
+@keyframes dropMessage {
+    from { 
+        top: -100%
+    }
+    to {
+        top: 10px;
+    }
+ }
+
+ 
 /*==============
 my_projects.html 
 ================*/
@@ -94,45 +157,8 @@ my_projects.html
     align-content: start;
     width: 90%;
     margin: 0 auto;
-    /* padding: 2rem 0; */
-    /* border: 2px solid red; */
 }
 
-/* .contact-message-wrapper {
-    position: absolute;
-    text-align: center;
-    z-index: 3;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 0.5rem;
-    border-radius: 8px;
-    width: 200px;
-    display: flex;
-    align-items: center;
-    justify-self: center;
-    background: rgba(0, 0, 0, 0.8);
-    animation-name: dropMessage;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    animation-delay: 0s;
-}
-
-.contact-message {
-    color: white;
-    font-weight: 300;
-    line-height: 1.5;
-}
-
-@keyframes dropMessage {
-    from { 
-        top: -100%
-    }
-    to {
-        top: 68px;
-    }
- } */
 .projects-header-container {
     justify-self: center;
 }
