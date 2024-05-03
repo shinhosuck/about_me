@@ -14,7 +14,7 @@
 .footer-header-container {
     justify-self: center;
     display: grid;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .footer-header {

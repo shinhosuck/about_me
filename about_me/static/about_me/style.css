@@ -194,6 +194,7 @@ my_projects.html
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 8px;
 }
 
 .project-img-wrapper > .sm-image {
@@ -207,6 +208,7 @@ my_projects.html
     z-index: 1;
     top: 0;
     left: 0;
+    border-radius: 8px;
     background: rgba(0, 0, 0, 0.452);
 }
 
