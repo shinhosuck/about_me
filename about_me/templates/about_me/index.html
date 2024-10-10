@@ -14,7 +14,7 @@
 
     <link rel="shortcut icon" href="{% static 'about_me/images/favicon.ico' %}"/>
 
-    <link type="text/css" rel="stylesheet" href="{% static 'about_me/css/all.min.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'about_me/fa-font/css/all.min.css' %}">
     <!-- font awesome css -->
 
     <link rel="stylesheet" type="text/css" href="{% static 'about_me/style.css' %}">
@@ -33,15 +33,12 @@
     {% include "about_me/nav.html" %}
    </header>
    <main>
-
-    {% if messages %}
-        {% for message in messages %}
-            <div class="message-received-container">
-                <i class="fa fa-times message-received-close-btn"></i>
-                <h3 class="received-message">{{ message }}</h3>
-            </div>
-        {% endfor %}
-    {% endif %}
+    <div class="message-received-container">
+        <button class="message-received-close-btn">
+            <i class="fa fa-times"></i>
+        </button>
+        <h3 class="received-message"></h3>
+    </div>
 
      {% block content %}
      {% endblock content %}

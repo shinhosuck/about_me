@@ -1,7 +1,7 @@
 from django.urls import path
 from about_me.views import (
-     my_projects, 
-     contact, 
+    my_projects, 
+    contact, 
 )
 
 app_name = "about_me"
