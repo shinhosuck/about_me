@@ -8,5 +8,20 @@ class Contact(models.Model):
     message = models.TextField()
     date = models.DateTimeField(default=timezone.now)
 
+    class Meta:
+        ordering = ['-date']
+
     def __str__(self):
         return self.email
+
+
+class CollectTraffic(models.Model):
+    ip = models.CharField(max_length=100)
+    domain = models.CharField(max_length=100, null=True, blank=True)
+    created = models.DateTimeField(default=timezone.now)
+
+    class Meta:
+        ordering = ['-created']
+
+    def __str__(self):
+        return self.ip

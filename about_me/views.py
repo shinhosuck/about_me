@@ -3,12 +3,19 @@ from about_me.forms import ContactForm
 from django.contrib import messages
 from utils.send_email import send_email
 from django.http import JsonResponse
-from .models import Contact
+from .models import Contact, CollectTraffic
 import json
 
 
 
 def my_projects(request):
+    ip = request.META.get('REMOTE_ADDR')
+    domain = request.META.get('HTTP_ORIGIN')
+    excluded_id = ['127.0.0.1', '35.173.69.207']
+
+    if ip not in excluded_id:
+        CollectTraffic.objects.create(ip=ip, domain=domain)
+    
     return render(request, "about_me/my_projects.html")
 
 

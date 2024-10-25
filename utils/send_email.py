@@ -25,4 +25,21 @@ def send_email(request, **kwargs):
     message.attach_alternative(html_body, 'text/html')
     message.send(fail_silently=False)
 
+    return new_message_alert_email(context)
+
+
+def new_message_alert_email(context):
+    
+    html_body = render_to_string('about_me/new_message_alert.html', context=context)
+
+    message = EmailMultiAlternatives(
+        subject = 'Portfolio: New Message Alert!',
+        body = '',
+        from_email = from_email,
+        to = [from_email,]
+    )
+
+    message.attach_alternative(html_body, 'text/html')
+    message.send(fail_silently=False)
+
     return 'Message sent!'

@@ -65,7 +65,7 @@ function showSentMessage(message) {
     if (messageReceivedContainer.classList.contains('drop-message')) {
         setTimeout(() => {
             messageReceivedContainer.classList.remove('drop-message')
-        }, 5000);
+        }, 50000);
     }
 }
 
