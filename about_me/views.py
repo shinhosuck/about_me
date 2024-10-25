@@ -13,7 +13,7 @@ def my_projects(request):
 
 
 def contact(request):
-    data = json.loads(request.body.decode())
+    data = json.loads(request.body.decode('utf-8'))
     
     if request.method == "POST":
         if data['name'] and data['email'] and data['message']:
