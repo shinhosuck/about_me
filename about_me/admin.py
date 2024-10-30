@@ -10,4 +10,4 @@ admin.site.register(Contact, ContactAdmin)
 
 @admin.register(CollectTraffic)
 class CollectTrafficAdmin(admin.ModelAdmin):
-    list_display = ['ip', 'domain', 'created', 'id']
+    list_display = ['ip', 'created', 'id']

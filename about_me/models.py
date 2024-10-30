@@ -17,7 +17,6 @@ class Contact(models.Model):
 
 class CollectTraffic(models.Model):
     ip = models.CharField(max_length=100)
-    domain = models.CharField(max_length=100, null=True, blank=True)
     created = models.DateTimeField(default=timezone.now)
 
     class Meta:

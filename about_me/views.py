@@ -9,12 +9,22 @@ import json
 
 
 def my_projects(request):
-    ip = request.META.get('REMOTE_ADDR')
-    domain = request.META.get('HTTP_ORIGIN')
-    excluded_id = ['127.0.0.1', '35.173.69.207']
+    remote_addr = request.META.get('REMOTE_ADDR')
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    
+    excluded_id = ['127.0.0.1', '35.173.69.207', '192.168.1.155']
+    
+    ip = ''
 
-    if ip not in excluded_id:
-        CollectTraffic.objects.create(ip=ip, domain=domain)
+    if remote_addr not in excluded_id or \
+        x_forwarded_for not in excluded_id:
+        
+        if x_forwarded_for:
+            ip = x_forwarded_for.split(',')[0].strip()
+        else:
+            ip = remote_addr
+
+    CollectTraffic.objects.create(ip=ip)
     
     return render(request, "about_me/my_projects.html")
 
