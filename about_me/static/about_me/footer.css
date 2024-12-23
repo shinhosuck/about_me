@@ -5,10 +5,10 @@
 
 .contact-info {
     width: 90%;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    gap: 3rem;
+    gap: 4rem;
 }
 
 .footer-header-container {
@@ -20,25 +20,32 @@
 .footer-header {
     justify-self: center;
     color: white;
-    letter-spacing: 0.05rem;
-    font-size: 2.5rem;
     padding-bottom: 0.5rem;
     text-align: center;
     border-bottom: 2px solid rgb(24, 188, 209);
+    font-weight: 600;
 }
 
 .footer-header-container > p {
     justify-self: center;
     letter-spacing: 0.09rem;
     line-height: 1.6;
-    color: #c9c9c9;
+    color: hsl(0, 0%, 80%);
     text-align: center;
     text-wrap: balance;
+    max-width: 500px;
 }
 
 .contact-container {
     display: grid;
     gap: 3rem;
+}
+
+.message-form-container {
+    display: grid;
+    align-content: start;
+    align-items: start;
+    gap: 2.5rem;
 }
 
 .email-container,
@@ -62,7 +69,7 @@
 }
 
 .message-form > label {
-    color: rgb(141, 141, 141);
+    color: hsl(0, 1%, 70%);
     letter-spacing: 0.05rem;
     font-size: 0.9rem;
     text-transform: uppercase;
@@ -72,13 +79,12 @@
 .message-form > input[type='text'] {
     width: 100%;
     box-sizing: border-box;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
+    padding: 0.8rem 0 0.5rem 0rem;
     border: none;
     background: transparent;
     color: white;
-    font-size: 0.95rem;
-    letter-spacing: 0.09rem;
+    font-size: 1rem;
+    letter-spacing: 0.03rem;
     border-bottom: 2px solid rgb(141, 141, 141);
 }
 
@@ -87,12 +93,13 @@
 }
 
 .message-form > textarea {
+    resize: horizontal;
     border:none;
     background: transparent;
     color: white;
-    padding-bottom: 0.5rem;
-    font-size: 0.95rem;
-    letter-spacing: 0.09rem;
+    padding: 0.8rem 0 0.5rem 0rem;
+    font-size: 1rem;
+    letter-spacing: 0.03rem;
     max-height: 150px;
     resize: none;
     border-bottom: 2px solid rgb(141, 141, 141);
@@ -159,7 +166,7 @@
 }
 
 .social-links-container {
-    padding: 3rem 0;
+    padding: 1.5rem 0;
     display: grid;
     justify-content: center;
     gap: 1rem;
@@ -183,7 +190,7 @@
     color: white;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 800px) {
 
     .contact-info {
         grid-template-columns: 1fr 1fr;

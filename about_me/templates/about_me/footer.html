@@ -9,7 +9,7 @@
             </p>
         </div>
         <div class="contact-container">
-            <div class="contact-form">
+            <div class="message-form-container">
                 <form class="message-form" action="{% url 'about_me:contact' %}" method="POST">
                     {% csrf_token %}
                     {{ form }}
@@ -29,7 +29,6 @@
 </div>
 <div class="footer-container-2">
     <div class="social-links-container">
-        <h3>ericanderson</h3>
         <div class="social-links">
             <a href="https://github.com/shinhosuck" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/eric-anderson-a6b906214/" target="_blank"><i class="fab fa-linkedin-in"></i></a>

@@ -13,36 +13,73 @@
             <h1 class="project-header">Skills</h1>
         </div>
         <div class="tech-stack-text">
-            <h2>Python</h2>
-            <p>3 Years of Experience</p>
+            <div class="tech-stack-image-and-header">
+                <div class="tech-stack-image">
+                    <img src="{% static 'about_me/images/skills_images/python.png' %}" alt="python">
+                </div>
+                <h2 class="tech-stack-header">Python</h2>
+            </div>
+            <p class="tech-stack-content">3 Years of Experience</p>
         </div>
         <div class="tech-stack-text">
-            <h2>Django</h2>
-            <p>3 Years of Experience</p>
+            <div class="tech-stack-image-and-header">
+                <div class="tech-stack-image">
+                    <img src="{% static 'about_me/images/skills_images/django.png' %}" alt="django">
+                </div>
+                <h2 class="tech-stack-header">Django</h2>
+            </div>
+            <p class="tech-stack-content">3 Years of Experience</p>
         </div>
         <div class="tech-stack-text">
-            <h2>Django Rest Framework</h2>
-            <p>1 Year of Experience</p>
+            <div class="tech-stack-image-and-header">
+                <div class="tech-stack-image drf-image">
+                    <img src="{% static 'about_me/images/skills_images/drf.jpg' %}" alt="drf">
+                </div>
+                <h2 class="tech-stack-header" style="display:grid">
+                    DRF
+                    <small style="font-size:0.85rem;font-weight:400">Django Rest Framework</small>
+                </h2>
+            </div>
+            <p class="tech-stack-content">1 Year of Experience</p>
         </div>
         <div class="tech-stack-text">
-            <h2>HTML</h2>
-            <p>3 Years of Experience</p>
+            <div class="tech-stack-image-and-header">
+                <div class="tech-stack-image">
+                    <img src="{% static 'about_me/images/skills_images/html.png' %}" alt="html">
+                </div>
+                <h2 class="tech-stack-header">HTML</h2>
+            </div>
+            <p class="tech-stack-content">3 Years of Experience</p>
         </div>
         <div class="tech-stack-text">
-            <h2>CSS</h2>
-            <p>3 Years of Experience</p>
+            <div class="tech-stack-image-and-header">
+                <div class="tech-stack-image">
+                    <img src="{% static 'about_me/images/skills_images/css.png' %}" alt="html">
+                </div>
+                <h2 class="tech-stack-header">CSS</h2>
+            </div>
+            <p class="tech-stack-content">3 Years of Experience</p>
         </div>
         <div class="tech-stack-text">
-            <h2>Javascript</h2>
-            <p>2 Years of Experience</p>
+            <div class="tech-stack-image-and-header">
+                <div class="tech-stack-image">
+                    <img src="{% static 'about_me/images/skills_images/js.png' %}" alt="html">
+                </div>
+                <h2 class="tech-stack-header">JavaScript</h2>
+            </div>
+            <p class="tech-stack-content">2 Years of Experience</p>
         </div>
         <div class="tech-stack-text">
-            <h2>ReactJS</h2>
-            <p>1 Year of Experience</p>
+            <div class="tech-stack-image-and-header">
+                <div class="tech-stack-image">
+                    <img src="{% static 'about_me/images/skills_images/react.png' %}" alt="html">
+                </div>
+                <h2 class="tech-stack-header">React</h2>
+            </div>
+            <p class="tech-stack-content">1 Year of Experience</p>
         </div>
     </div>
 </div>
-
 
 <div class="projects-main">
     <div id="projects" class="projects">
@@ -52,19 +89,19 @@
 
         <div class="project">
             <div class="project-img-wrapper">
-                <img class="lg-image" src="{% static 'about_me/images/pet-blog.webp' %}" alt="">
-                <img class="sm-image" src="{% static 'about_me/images/small-pet-blog.webp' %}" alt="">
+                <img class="lg-image" src="{% static 'about_me/images/projects_images/pet-blog.webp' %}" alt="">
+                <img class="sm-image" src="{% static 'about_me/images/projects_images/small-pet-blog.webp' %}" alt="">
                 <div class="img-color-overlay"></div>
             </div>
             <div class="project-text-wrapper">
-                <h4>Pet Blog</h4>
+                <h3>Pet Blog</h3>
                 <div class="tech-stacks-used">
-                    <h4>Python,</h4>
-                    <h4>Django,</h4>
-                    <h4>Django Rest Framework,</h4>
-                    <h4>React,</h4>
-                    <h4>HTML,</h4>
-                    <h4>CSS</h4>
+                    <h5>Python,</h5>
+                    <h5>Django,</h5>
+                    <h5>Django Rest Framework,</h4>
+                    <h5>React,</h5>
+                    <h5>HTML,</h5>
+                    <h5>CSS</h5>
                 </div>
                 <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
                     <a class='view-code' href="https://github.com/shinhosuck/django-reactjS-pet-blog-backend" target="_blank">Backend Code</a>
@@ -80,18 +117,18 @@
 
         <div class="project">
             <div class="project-img-wrapper">
-                <img class="lg-image" src="{% static 'about_me/images/e-commerce.webp' %}" alt="">
-                <img class="sm-image" src="{% static 'about_me/images/small-e-commerce.webp' %}" alt="">
+                <img class="lg-image" src="{% static 'about_me/images/projects_images/e-commerce.webp' %}" alt="">
+                <img class="sm-image" src="{% static 'about_me/images/projects_images/small-e-commerce.webp' %}" alt="">
                 <div class="img-color-overlay"></div>
             </div>
             <div class="project-text-wrapper">
-                <h4>Ecommerce</h4>
+                <h3>Ecommerce</h3>
                 <div class="tech-stacks-used">
-                    <h4>Python,</h4>
-                    <h4>Django,</h4>
-                    <h4>HTML,</h4>
-                    <h4>CSS,</h4>
-                    <h4>Javascript</h4>
+                    <h5>Python,</h5>
+                    <h5>Django,</h5>
+                    <h5>HTML,</h5>
+                    <h5>CSS,</h5>
+                    <h5>Javascript</h5>
                 </div>
                 <a class='view-code' href="https://github.com/shinhosuck/e-commerce" target="_blank">View Code</a>
                 <p>
@@ -105,19 +142,19 @@
 
         <div class="project">
             <div class="project-img-wrapper">
-                <img class="lg-image" src="{% static 'about_me/images/cloud-music.webp' %}" alt="">
-                <img class="sm-image" src="{% static 'about_me/images/small-cloud-music.webp' %}" alt="">
+                <img class="lg-image" src="{% static 'about_me/images/projects_images/cloud-music.webp' %}" alt="">
+                <img class="sm-image" src="{% static 'about_me/images/projects_images/small-cloud-music.webp' %}" alt="">
                 <div class="img-color-overlay"></div>
             </div>
             
             <div class="project-text-wrapper">
-                <h4>Cloud Music</h4>
+                <h3>Cloud Music</h3>
                 <div class="tech-stacks-used">
-                    <h4>Python,</h4>
-                    <h4>Django,</h4>
-                    <h4>HTML,</h4>
-                    <h4>CSS,</h4>
-                    <h4>Javascript</h4>
+                    <h5>Python,</h5>
+                    <h5>Django,</h5>
+                    <h5>HTML,</h5>
+                    <h5>CSS,</h5>
+                    <h5>JavaScript</h5>
                 </div>
                 <a class='view-code' href="https://github.com/shinhosuck/myCloudMusic" target="_blank">View Code</a>
                 <p>
