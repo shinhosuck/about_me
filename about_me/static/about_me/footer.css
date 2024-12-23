@@ -38,6 +38,8 @@
 
 .contact-container {
     display: grid;
+    align-content: start;
+    align-items: start;
     gap: 3rem;
 }
 
@@ -50,22 +52,43 @@
 
 .email-container,
 .phone-number-container {
+    justify-self: center;
     display: grid;
-    gap: 0.8rem;
+    gap: 0.5rem;
     text-align: center;
-    color: rgb(212, 212, 212);
-    letter-spacing: 0.05rem;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.03rem;
+    transition: color 200ms linear;
 }
 
-.email-container > a,
-.phone-number-container > a {
-    color: rgb(0, 171, 214);
+.email-container > span,
+.phone-number-container > span {
+    color: hsl(0, 0%, 60%);
     letter-spacing: 0.05rem;
+    transition: color 200ms linear;
+}
+
+.email > i,
+.phone > i {
+    font-size: 1.3rem;
+    margin-right: 0.2rem;
+}
+
+@media (hover) {
+    .email-container:hover,
+    .phone-number-container:hover {
+        color: rgb(24, 188, 209)
+    }
+
+    .email-container:hover > span,
+    .phone-number-container:hover > span {
+        color: rgb(24, 188, 209)
+    }
 }
 
 .message-form {
     display: grid;
-    gap: 0.8rem;
+    gap: 1rem;
 }
 
 .message-form > label {
@@ -111,20 +134,18 @@
 
 .contact-submit {
     justify-self: end;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 500 !important;
-    text-transform: uppercase;
     border: none;
     padding: 1rem 2rem;
     padding-top: 1rem;
     color: white;;
     margin-top: 1rem;
-    border-radius: 25px;
+    border-radius: 30px;
     cursor: pointer;
-    background: rgb(0, 136, 170);
-    letter-spacing: 0.05rem;
+    background: rgb(0, 131, 148);
+    letter-spacing: 0.03rem;
     transition: background 0.25s linear;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -214,6 +235,7 @@
     .email-container,
     .phone-number-container {
         text-align: start;
+        justify-self: start;
     }
 
     .message-form > textarea {
