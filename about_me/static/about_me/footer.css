@@ -40,7 +40,7 @@
     display: grid;
     align-content: start;
     align-items: start;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .message-form-container {
@@ -48,6 +48,10 @@
     align-content: start;
     align-items: start;
     gap: 2.5rem;
+}
+
+.email-container {
+    margin-top: 3rem;
 }
 
 .email-container,

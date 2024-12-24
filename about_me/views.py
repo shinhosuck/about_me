@@ -12,19 +12,17 @@ def my_projects(request):
     remote_addr = request.META.get('REMOTE_ADDR')
     x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
     
-    excluded_id = ['127.0.0.1', '35.173.69.207', '192.168.1.155']
+    excluded_ip = ['127.0.0.1', '35.173.69.207', '192.168.1.155']
     
     ip = ''
 
-    if remote_addr not in excluded_id or \
-        x_forwarded_for not in excluded_id:
-        
-        if x_forwarded_for:
-            ip = x_forwarded_for.split(',')[0].strip()
-        else:
-            ip = remote_addr
+    if remote_addr and remote_addr not in excluded_ip:
+        ip = remote_addr
+    if x_forwarded_for and x_forwarded_for not in excluded_ip:
+        ip = x_forwarded_for.split(',')[0].strip()
 
-    CollectTraffic.objects.create(ip=ip)
+    if ip:
+        CollectTraffic.objects.create(ip=ip)
     
     return render(request, "about_me/my_projects.html")
 
