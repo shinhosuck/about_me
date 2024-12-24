@@ -299,7 +299,7 @@ my_projects.html
 
 .project-view-code-container {
     display: flex; 
-    gap: 1rem; 
+    gap: 0.5rem; 
     flex-wrap: wrap;
     margin-top: 0.5rem;
 }
