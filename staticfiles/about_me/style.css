@@ -217,9 +217,6 @@ my_projects.html
 }
 
 .project {
-    /* display: flex;
-    flex-direction: column;
-    align-items: start; */
     display: grid;
     align-items: start;
     align-content: start;
@@ -266,9 +263,23 @@ my_projects.html
     align-items: start;
 }
 
-.project-text-wrapper > h3{
+.project-name-header{
     color: white;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+}
+
+.project-tech-stacks-container {
+    display: grid;
+    align-items: start;
+    align-content: start;
+    gap: 0.3rem;
+    margin-top: 0.5rem;
+}
+
+.project-tech-stack {
+    color: hsl(0, 0%, 100%);
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 .tech-stacks-used {
@@ -278,21 +289,28 @@ my_projects.html
     gap: 0.5rem;
 }
 
-.tech-stacks-used > h5 {
-    color: rgb(126, 126, 126);
+.tech-stacks-used > li {
+    color: hsl(0, 0%, 50%);
     font-weight: initial;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     letter-spacing: 0.03rem;
     font-weight: 400;
 }
 
+.project-view-code-container {
+    display: flex; 
+    gap: 1rem; 
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
 .view-code {
     justify-self: start;
-    color: white;
+    color: rgb(28, 200, 223);
     letter-spacing: 0.05rem;
-    font-size: 0.9rem;
-    text-transform: uppercase;
+    font-size: rem;
     padding-bottom: 0.5rem;
+    font-weight: 500;
     border-bottom: 2px solid transparent;
     transition: color 200ms linear, border-bottom 200ms linear;
 }
@@ -304,13 +322,12 @@ my_projects.html
     }
 }
 
-.project-text-wrapper > p{
+.project-text-content{
     line-height: 1.4;
-    /* margin-top: 0.5rem; */
     letter-spacing: 0.05rem;
     color: rgb(201, 201, 201);
-    text-wrap: balance;
-    max-width: 600px;
+    text-wrap: pretty;
+    max-width: 500px;
 }
 
 .see-website-button {
@@ -364,9 +381,6 @@ my_projects.html
 
 @media screen and (min-width: 700px) {
     .project {
-        display: grid;
-        align-items: center;
-        align-content: center;
         gap: 4rem;
         grid-template-columns: 350px 1fr;
     }
@@ -377,5 +391,12 @@ my_projects.html
 
     .project-img-wrapper > .lg-image {
         display: none !important;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .project {
+        align-items: center;
+        align-content: center;
     }
 }
