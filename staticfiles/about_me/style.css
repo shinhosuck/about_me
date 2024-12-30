@@ -256,7 +256,6 @@ my_projects.html
     border-radius: 8px;
     background: rgba(0, 0, 0, 0.452);
 }
-
 .project-text-wrapper {
     display: grid;
     gap: 0.8rem;
@@ -266,6 +265,25 @@ my_projects.html
 .project-name-header{
     color: white;
     font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem
+}
+
+.project-name {
+    
+}
+
+.project-name-divider {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--gray)
+}
+
+.project-date {
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: var(--gray);
 }
 
 .project-tech-stacks-container {
