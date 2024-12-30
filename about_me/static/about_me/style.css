@@ -260,6 +260,7 @@ my_projects.html
     display: grid;
     gap: 0.8rem;
     align-items: start;
+    align-content: start;
 }
 
 .project-name-header{
